@@ -67,6 +67,9 @@ const Projects = () => {
             </ListItemAvatar>
             <ListItemText primary='My Portfolio Website'
             secondary='Using ReactJs and MaterialUI'/>
+            <Link href='https://github.com/Sakthikarthick3107/Portfolio.github.io' target='blank'>
+            View Code
+            </Link>
           </ListItem>
           </div>
           
