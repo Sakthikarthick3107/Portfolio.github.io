@@ -37,8 +37,8 @@ const Home = () => {
                         <Typography variant='h4'>Hello,I am</Typography>
                         <Typography variant='h2'>Sakthikarthick N</Typography>
                         <Typography variant='h6'>
-                        is enrolling in the Computer Science Department's fourth year of the BE programme at Panimalar 
-                        Engineering College.A dedicated student willing to put knowledge into practise through projects and coordination 
+                         currently pursuing 4th year BE Computer Science Department at Panimalar 
+                        Engineering College.A dedicated student willing to put knowledge into practice through projects and coordination 
                         in order to achieve objectives.
                         </Typography><br/>
                         <Stack direction='row'  spacing={0.5}>
