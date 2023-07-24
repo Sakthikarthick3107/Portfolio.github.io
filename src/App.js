@@ -13,10 +13,12 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Events, scroller } from 'react-scroll';
 
 
+
 function App() {
   const [darkMode , setDarkMode] = useState(false)
-  const theme = createTheme(  darkMode? dark : light)
-  const icon =  createTheme(darkMode?<WbSunnyIcon/>:<DarkModeIcon/>)
+  const theme =darkMode? dark : light
+  const icon =  darkMode?<WbSunnyIcon/>:<DarkModeIcon/>
+    
   const handleThemeChange = () =>{
     setDarkMode((prevMode) => !prevMode)
   }
@@ -48,10 +50,18 @@ function App() {
       offset: -50,
     });
   };
+
+
+  const styles  = {
+    container :{
+      background : darkMode? 'linear-gradient(135deg , #000000 , #212121 ,#000000 ,#37474f)' : 
+                                                'linear-gradient( 135deg, #ffffff, #e3f2fd,#ffffff,#e0f7fa)'
+    }
+  }
   return (
     
       
-      <div className="App" >
+      <div className="App"  style={styles.container}>
       <ThemeProvider theme={theme}>
         <CssBaseline/>
         <NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} />
@@ -59,6 +69,7 @@ function App() {
         <Education/>
         <Skills  />
         <Projects />
+        
         </ThemeProvider>
       </div>
     

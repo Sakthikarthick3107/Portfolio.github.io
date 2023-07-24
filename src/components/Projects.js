@@ -5,6 +5,7 @@ import hen from '../images/blogo.png'
 import resume from '../images/resume.svg'
 import { Element } from 'react-scroll'
 import animateText from '../styles/animateText'
+import authenticate from '../images/laptop-security.svg'
 
 
 const Projects = () => {
@@ -58,7 +59,7 @@ const Projects = () => {
           </div>
           
 
-          <Divider variant='inset' component='li'/>
+          
 
           <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
           <ListItem  >
@@ -75,6 +76,19 @@ const Projects = () => {
                   Visit Site
               </Link>
             </Stack>
+            
+          </ListItem>
+          </div>
+
+          <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
+          <ListItem  >
+            <ListItemAvatar>
+              <Avatar src={authenticate} alt='' sx={{height:120,width:120}} />
+            </ListItemAvatar>
+            <ListItemText primary='A simple login and signup page with creative UI designs'
+            secondary='Using React Js for frontend with MaterialUI for styling with attractive themes and backgrounds.And 
+            Django for backend with jwt authentication and password encryption when user logged in .In future ,I will upgrade it 
+            with better features like Two factor authentication and so on.'/><br/>
             
           </ListItem>
           </div>

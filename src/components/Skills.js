@@ -4,6 +4,7 @@ import skill from '../images/skills.svg'
 import Item from '../styles/Item'
 import java from '../images/java.svg'
 import csharp from '../images/csharp.svg'
+import py from '../images/python.svg'
 import react from '../images/react.svg'
 import django from '../images/django.svg'
 import mui from '../images/mui.png'
@@ -56,6 +57,9 @@ const Skills = () => {
                         </Tooltip>
                         <Tooltip title='C Sharp(C#)' arrow>
                             <img alt='' style={{height:50,width:60}} src={csharp}/>
+                        </Tooltip>
+                        <Tooltip title='Python' arrow>
+                            <img alt='' style={{height:60,width:60}} src={py}/>
                         </Tooltip>
                     </Stack>
                     </div>

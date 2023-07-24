@@ -6,9 +6,18 @@ const light = createTheme({
       primary:{
         main:'rgb(255,255,255,0.5)'
       },
-      background:{
-        default : "#f0f0f0"
-      }
+      // background:{
+      //   default : "#f0f0f0"
+      // }
+    },
+    breakpoints: {
+      values: {
+        xs: 0, // Mobile devices
+        sm: 600, // Tablets and small screens
+        md: 960, // Desktop
+        lg: 1280, // Large desktops
+        xl: 1920, // Extra large desktops
+      },
     },
     
     components:{
@@ -76,13 +85,16 @@ const light = createTheme({
           styleOverrides:{
             root:{
               padding:0,
-              margin:10
+              
             }
           }
          },
          MuiListItem:{
           styleOverrides:{
               root:{
+                border:'solid 1px black',
+                borderRadius:5,
+                marginBottom:2,
                   ":hover":{
                       backgroundColor:'#f0f0ea'
                   }

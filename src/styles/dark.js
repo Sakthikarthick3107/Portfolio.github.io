@@ -7,14 +7,23 @@ const dark = createTheme({
         primary:{
             main: 'rgb(0,0,0,0.5)'
         },
-      background:{
-        default : "#212121"
-      }
+      // background:{
+      //   default : "#212121"
+      // }
     },
     typography:{
         allVariants:{
             color:'white'
         }
+    },
+    breakpoints: {
+      values: {
+        xs: 0, // Mobile devices
+        sm: 600, // Tablets and small screens
+        md: 960, // Desktop
+        lg: 1280, // Large desktops
+        xl: 1920, // Extra large desktops
+      },
     },
     components:{
         MuiLink:{
@@ -81,7 +90,8 @@ const dark = createTheme({
             styleOverrides:{
               root:{
                 padding:0,
-                margin:10
+                
+                backgroundColor :'transparent'
               }
             }
            },
@@ -96,6 +106,9 @@ const dark = createTheme({
             styleOverrides:{
                 root:{
                     backgroundColor:'#242424',
+                    border:'solid 1px black',
+                    borderRadius:5,
+                    marginBottom:2,
                     ":hover":{
                         backgroundColor:'#616161'
                     }
