@@ -59,7 +59,7 @@ const Projects = () => {
               </CardContent>
               
               <CardActions>
-                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/sakthibroilers.github.io'>Code</Button>
+                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/sakthibroilers.github.io' target='_blank'>Code</Button>
                 <Button  variant='contained'>Live</Button>
               </CardActions>
             </Card>
@@ -80,8 +80,8 @@ const Projects = () => {
               </CardContent>
               
               <CardActions>
-                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/Portfolio.github.io'>Code</Button>
-                <Button variant='contained' component={Link} href='https://sakthikarthick3107.netlify.app/' target='blank'>Live</Button>
+                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/Portfolio.github.io' target='_blank'>Code</Button>
+                <Button variant='contained' component={Link} href='https://sakthikarthick3107.netlify.app/' target='_blank'>Live</Button>
               </CardActions>
             </Card>
             </div>
@@ -123,8 +123,8 @@ const Projects = () => {
               </CardContent>
               
               <CardActions>
-                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list' >Code</Button>
-                <Button variant='contained' component={Link} href='https://sakthikarthicks-to-do-list.netlify.app/' target='blank' >Live</Button>
+                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list' target='_blank' >Code</Button>
+                <Button variant='contained' component={Link} href='https://sakthikarthicks-to-do-list.netlify.app/' target='_blank' >Live</Button>
               </CardActions>
             </Card>
             </div>
