@@ -1,4 +1,4 @@
-import { Avatar, Container, Divider, Link, List, ListItem, ListItemAvatar, ListItemText, Stack, Typography } from '@mui/material'
+import { Avatar, Button, Card, CardActionArea, CardActions, CardContent, CardHeader, CardMedia, Container,  Grid, Link,  Stack, Typography, useMediaQuery } from '@mui/material'
 import React,{useRef , useState , useEffect} from 'react'
 import projects from '../images/projects.svg'
 import hen from '../images/blogo.png'
@@ -6,13 +6,13 @@ import resume from '../images/resume.svg'
 import { Element } from 'react-scroll'
 import animateText from '../styles/animateText'
 import authenticate from '../images/laptop-security.svg'
-
+import notes from '../images/notes.svg'
 
 const Projects = () => {
   const animate = animateText()
   const targetRef = useRef(null);
   const [visible, setVisible] = useState(false);
-
+  const isMobileScreen = useMediaQuery('(max-width:600px')
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -42,58 +42,95 @@ const Projects = () => {
             <Typography variant='h3' textAlign='center'>Projects</Typography>
         </Stack>
         <div style={{height:50}}></div>
-        <Container maxWidth='md'>
-        <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+        <Container maxWidth={isMobileScreen?'md' : 'lg'}>
 
-        <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
-          <ListItem  >
-            <ListItemAvatar>
-              <Avatar src={hen} alt='' sx={{height:120,width:120}} />
-            </ListItemAvatar>
-            <ListItemText primary='Website for my fathers chicken shop'
-            secondary='Using html,css,js,php.'/><br/>
-            <Link href='https://github.com/Sakthikarthick3107/sakthibroilers.github.io' target='blank'>
-            View Code
-            </Link>
-          </ListItem>
-          </div>
-          
+        <Grid container spacing={4}>
 
-          
-
+        
+          <Grid item lg={4} md={6} sm={6} xs={12}>
           <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
-          <ListItem  >
-            <ListItemAvatar>
-              <Avatar src={resume} alt='' sx={{height:120,width:120}} />
-            </ListItemAvatar>
-            <ListItemText primary='My Portfolio Website'
-            secondary='Using ReactJs and MaterialUI'/>
-            <Stack direction='column' spacing={2}>
-              <Link href='https://github.com/Sakthikarthick3107/Portfolio.github.io ' target='blank'>
-                  View Code
-              </Link>
-              <Link href='https://sakthikarthick3107.netlify.app/' target='blank'>
-                  Visit Site
-              </Link>
-            </Stack>
-            
-          </ListItem>
-          </div>
+            <Card>
+              <CardHeader  title='Chicken Shop' subheader='For advertising about our business through the Internet '/>
+              <CardMedia component='img' image={hen} alt=''/>
+              <CardContent>
+                
+                    Website for my fathers chicken shop using html,css,js,php.
+                
+              </CardContent>
+              
+              <CardActions>
+                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/sakthibroilers.github.io'>Code</Button>
+                <Button  variant='contained'>Live</Button>
+              </CardActions>
+            </Card>
+            </div>
+          </Grid>
+        
 
+        
+          <Grid item lg={4} md={6} sm={6} xs={12}>
           <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
-          <ListItem  >
-            <ListItemAvatar>
-              <Avatar src={authenticate} alt='' sx={{height:120,width:120}} />
-            </ListItemAvatar>
-            <ListItemText primary='A simple login and signup page with creative UI designs'
-            secondary='Using React Js for frontend with MaterialUI for styling with attractive themes and backgrounds.And 
+            <Card>
+              <CardHeader  title='Portfolio' subheader='For showcasing my skillsets and experiences in academics'/>
+              <CardMedia component='img' image={resume} alt=''/>
+              <CardContent>
+                
+                  My Portfolio Website using ReactJs and MaterialUI
+                
+              </CardContent>
+              
+              <CardActions>
+                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/Portfolio.github.io'>Code</Button>
+                <Button variant='contained' component={Link} href='https://sakthikarthick3107.netlify.app/' target='blank'>Live</Button>
+              </CardActions>
+            </Card>
+            </div>
+          </Grid>
+
+        
+          <Grid item lg={4} md={6} sm={6} xs={12}>
+          <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
+          <Card>
+              <CardHeader  title='Authentication' subheader='Enhances security by authenticate every users with their user credentials'/>
+              <CardMedia component='img' image={authenticate} alt=''/>
+              <CardContent>
+                A simple login and signup page with creative UI designs
+                  using React Js for frontend with MaterialUI for styling with attractive themes and backgrounds.And 
             Django for backend with jwt authentication and password encryption when user logged in .In future ,I will upgrade it 
-            with better features like Two factor authentication and so on.'/><br/>
-            
-          </ListItem>
-          </div>
+            with better features like Two factor authentication and so on.
+                
+              </CardContent>
+              <CardActions>
+                <Button variant='contained' >Code</Button>
+                <Button  variant='contained'>Live</Button>
+              </CardActions>
+            </Card>
+            </div>
+          </Grid>
+        
+
+        
           
-        </List>
+          <Grid item lg={4} md={6} sm={6} xs={12}>
+          <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
+          <Card>
+              <CardHeader  title='To-do-list' subheader='Simple tool for note down our daily tasks and summarize'/>
+              <CardMedia component='img' image={notes} alt=''/>
+              <CardContent>
+                
+                  A simple to-do-list with neat user interfaces and features
+                
+              </CardContent>
+              
+              <CardActions>
+                <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list' >Code</Button>
+                <Button variant='contained' component={Link} href='https://sakthikarthicks-to-do-list.netlify.app/' target='blank' >Live</Button>
+              </CardActions>
+            </Card>
+            </div>
+          </Grid>
+        
+          </Grid>
         </Container>
         </div>
         <div style={{height:50}}></div>

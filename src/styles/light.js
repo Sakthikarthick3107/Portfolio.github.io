@@ -81,26 +81,42 @@ const light = createTheme({
             }
           }
          },
-         MuiList:{
-          styleOverrides:{
-            root:{
-              padding:0,
-              
+         MuiCard:{
+          styleOverrides: {
+            root: {
+                border:'solid 1px #b3e5fc',
+                transition: 'transform 0.2s ease',
+                ":hover":{
+                  transform: 'scale(1.02)',
+                }
             }
           }
          },
-         MuiListItem:{
-          styleOverrides:{
-              root:{
-                border:'solid 1px black',
-                borderRadius:5,
-                marginBottom:2,
-                  ":hover":{
-                      backgroundColor:'#f0f0ea'
-                  }
+         MuiCardHeader:{
+            styleOverrides: {
+              root: {
+                backgroundColor: '#42a5f5'
               }
+            }
+         },
+         MuiCardMedia:{
+          styleOverrides: {
+            img: {
+              height: 150,
+              width: 150,
+              display:'block',
+              marginLeft:  'auto',
+              marginRight:'auto'
+            }
           }
-       }
+         },
+         MuiCardActions:{
+          styleOverrides: {
+            root: {
+              backgroundColor: '#212121'
+            }
+          }
+         }
     }
 })
 light.shadows[1] = light.shadows[0]

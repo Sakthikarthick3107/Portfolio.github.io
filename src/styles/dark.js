@@ -102,18 +102,50 @@ const dark = createTheme({
                 }
             }
         },
-         MuiListItem:{
-            styleOverrides:{
-                root:{
-                    backgroundColor:'#242424',
-                    border:'solid 1px black',
-                    borderRadius:5,
-                    marginBottom:2,
-                    ":hover":{
-                        backgroundColor:'#616161'
-                    }
+        MuiCard:{
+          styleOverrides: {
+            root: {
+                border:'solid 1px #b3e5fc',
+                transition: 'transform 0.2s ease',
+                ":hover":{
+                  transform: 'scale(1.02)',
                 }
             }
+          }
+         },
+         MuiCardHeader:{
+            styleOverrides: {
+              root: {
+                backgroundColor: '#42a5f5'
+              }
+            }
+         },
+         MuiCardMedia:{
+          styleOverrides: {
+            img: {
+              height: 150,
+              width: 150,
+              display:'block',
+              marginLeft:  'auto',
+              marginRight:'auto',
+              
+            },
+            
+          },
+         },
+         MuiCardContent:{
+            styleOverrides: {
+              root:{
+                color: 'black'
+              }
+            }
+         },
+         MuiCardActions:{
+          styleOverrides: {
+            root: {
+              backgroundColor: '#212121'
+            }
+          }
          }
     }
 })

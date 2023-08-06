@@ -28,10 +28,7 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
                     {isMobileScreen ?  <IconButton onClick={onThemeChange}>{icon}</IconButton> : (
                         <Box>
                         <Tabs value={value} onChange={handleChange}>
-                            {/* <Link component={Tab} to='home' spy={true} smooth={true} duration={500} offset={-50}>Home</Link>
-                            <Link component={Tab} to='education' spy={true} smooth={true} duration={500} offset={-50}>Education</Link>
-                            <Link component={Tab} to='skills' spy={true} smooth={true} duration={500} offset={-50}>Skills</Link>
-                            <Link component={Tab} to='projects' spy={true} smooth={true} duration={500} offset={-50}>Projects</Link> */}
+                            
                             <Tab onClick={() => scrolltoSection('home')}   label="home" /> 
                             <Tab onClick={() => scrolltoSection('education')}   label="education" />
                             <Tab  onClick={() => scrolltoSection('skills')}  label="skills"/>
