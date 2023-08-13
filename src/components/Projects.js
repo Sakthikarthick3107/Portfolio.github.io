@@ -1,4 +1,4 @@
-import { Avatar, Button, Card, CardActionArea, CardActions, CardContent, CardHeader, CardMedia, Container,  Grid, Link,  Stack, Typography, useMediaQuery } from '@mui/material'
+import {  Button, Card,  CardActions, CardContent, CardHeader, CardMedia, Container,  Grid, Link,  Stack, Typography, useMediaQuery } from '@mui/material'
 import React,{useRef , useState , useEffect} from 'react'
 import projects from '../images/projects.svg'
 import hen from '../images/blogo.png'
@@ -60,7 +60,7 @@ const Projects = () => {
               
               <CardActions>
                 <Button variant='contained' component={Link} href='https://github.com/Sakthikarthick3107/sakthibroilers.github.io' target='_blank'>Code</Button>
-                <Button  variant='contained'>Live</Button>
+                <Button  variant='contained' component={Link} href='https://sakthibroilers.netlify.app'>Live</Button>
               </CardActions>
             </Card>
             </div>
