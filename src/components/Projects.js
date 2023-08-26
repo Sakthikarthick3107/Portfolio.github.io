@@ -94,10 +94,8 @@ const Projects = () => {
               <CardHeader  title='Authentication' subheader='Enhances security by authenticate every users with their user credentials'/>
               <CardMedia component='img' image={authenticate} alt=''/>
               <CardContent>
-                A simple login and signup page with creative UI designs
-                  using React Js for frontend with MaterialUI for styling with attractive themes and backgrounds.And 
-            Django for backend with jwt authentication and password encryption when user logged in .In future ,I will upgrade it 
-            with better features like Two factor authentication and so on.
+              Designed and developed a dynamic full-stack authentication page
+that combines security with creative designs and themes. 
                 
               </CardContent>
               <CardActions>

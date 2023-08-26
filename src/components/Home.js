@@ -24,11 +24,11 @@ const Home = () => {
         <Box>
             <Grid container >
                 <Grid item lg={6} md={4} sm={12} textAlign='center'>
-                    <Item>
+                    
                         <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}>
                         <img src={myImage} alt='myImage'  width={650} height={420} />
                         </div>
-                    </Item>
+                    
                 </Grid>
                 <Grid item lg={6} md={8} sm={12}>
                     <Item>

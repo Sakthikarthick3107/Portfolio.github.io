@@ -1,7 +1,7 @@
 import {  Grid, Stack, Tooltip, Typography } from '@mui/material'
 import React,{useRef ,  useState , useEffect} from 'react'
 import skill from '../images/skills.svg'
-import Item from '../styles/Item'
+//import Item from '../styles/Stack'
 import java from '../images/java.svg'
 import csharp from '../images/csharp.svg'
 import py from '../images/python.svg'
@@ -46,10 +46,11 @@ const Skills = () => {
             <Typography variant='h3'>Skills</Typography>
         </Stack>
         <div style={{height:50}}></div>
-        <Grid container   justifyContent='center'  alignContent='center' >
-            <Grid item lg={4}>
-                <Item>
-                    <Typography variant='h5'>Programming</Typography><br/>
+        <Grid container  spacing={2} justifyContent='center'  alignContent='center' >
+            <Grid item lg={4} md={4} xs={6} >
+                <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
+                    <Typography variant='h6'>Programming</Typography><br/>
+                    
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='row' spacing={2}>
                         <Tooltip title='Java' arrow>
@@ -64,11 +65,12 @@ const Skills = () => {
                     </Stack>
                     </div>
                     
-                </Item>
+                </Stack>
             </Grid>
-            <Grid item lg={4}>
-                <Item>
-                    <Typography variant='h5'>Frontend Frameworks</Typography><br/>
+            <Grid item lg={4} md={4} xs={6}>
+                <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
+                    <Typography variant='h6'>Frontend Frameworks</Typography><br/>
+                    
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='row' spacing={2}>
                         <Tooltip title='React Js' arrow>
@@ -81,11 +83,12 @@ const Skills = () => {
                     </Stack>
                     </div>
                     
-                </Item>
+                </Stack>
             </Grid>
-            <Grid item lg={4}>
-                <Item>
-                    <Typography variant='h5'>Backend Frameworks</Typography><br/>
+            <Grid item lg={4} md={4} xs={6}>
+                <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
+                    <Typography variant='h6'>Backend Frameworks</Typography><br/>
+                    
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='row' spacing={2}>
                         <Tooltip title='Django' arrow>
@@ -98,11 +101,12 @@ const Skills = () => {
                     </Stack>
                     </div>
                     
-                </Item>
+                </Stack>
             </Grid>
-            <Grid item lg={4}>
-                <Item>
-                    <Typography variant='h5'>Problem Solving</Typography><br/>
+            <Grid item lg={4} md={4} xs={6}>
+                <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
+                    <Typography variant='h6'>Problem Solving</Typography><br/>
+                    
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='column' spacing={1} >
                         <Tooltip title='CodeChef' arrow>
@@ -114,7 +118,7 @@ const Skills = () => {
                     </Stack>
                     </div>
                     
-                </Item>
+                </Stack>
             </Grid>
         </Grid>
         </div>

@@ -4,11 +4,13 @@ import { Timeline, TimelineItem ,TimelineConnector, TimelineContent, TimelineDot
 import animateText from '../styles/animateText';
 import EducationIcon from '../images/education.svg'
 import { Element } from 'react-scroll';
+import {useMediaQuery} from '@mui/material'
 
 const Education = () => {
   const animate = animateText()
   const targetRef = useRef(null);
   const [visible, setVisible] = useState(false);
+  const isMobileScreen = useMediaQuery('(max-width:600px')
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -39,7 +41,7 @@ const Education = () => {
       <Avatar src={EducationIcon} alt='EducationAvatar' sx={{height:100,width:100}} />
       <Typography variant='h3'>Education</Typography><br/>
       </Stack>
-      <Container maxWidth='md' >
+      <Container maxWidth={isMobileScreen? 'xs' :'md'} >
       <Timeline>
 
         <TimelineItem>

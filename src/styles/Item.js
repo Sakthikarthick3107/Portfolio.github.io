@@ -5,10 +5,10 @@ import { Box } from "@mui/material"
 
 const Item = (props) =>(
   <Box sx={{
-          padding:5,
-          paddingLeft:8,
-          
-          
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center',
+          padding:2
           }}>
     {props.children}
   </Box>
