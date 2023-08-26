@@ -146,6 +146,18 @@ const dark = createTheme({
               backgroundColor: '#212121'
             }
           }
+         },
+         MuiButton:{
+          styleOverrides: {
+            contained:{
+              backgroundColor: '#757575',
+              borderRadius:10,
+              fontSize:14,
+              fontWeight:'bold',
+              transition:'ease-in-out 3ms',
+              
+            }
+          }
          }
     }
 })

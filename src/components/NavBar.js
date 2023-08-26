@@ -33,7 +33,7 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
                             <Tab onClick={() => scrolltoSection('home')}   label="home" /> 
                             <Tab onClick={() => scrolltoSection('education')}   label="education" />
                             <Tab  onClick={() => scrolltoSection('skills')}  label="skills"/>
-                            <Tab  onClick={() => scrolltoSection('projects')}  label='projects'/>
+                            <Tab  onClick={() => scrolltoSection('projects')}  label='works'/>
                             
                         </Tabs>
                         <IconButton onClick={onThemeChange}>{icon}</IconButton>

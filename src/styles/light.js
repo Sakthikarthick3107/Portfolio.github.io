@@ -6,9 +6,7 @@ const light = createTheme({
       primary:{
         main:'rgb(255,255,255,0.5)'
       },
-      // background:{
-      //   default : "#f0f0f0"
-      // }
+      
     },
     breakpoints: {
       values: {
@@ -114,6 +112,20 @@ const light = createTheme({
           styleOverrides: {
             root: {
               backgroundColor: '#212121'
+            }
+          }
+         },
+         MuiButton:{
+          styleOverrides: {
+            contained:{
+              backgroundColor: '#bdbdbd',
+              borderRadius:10,
+              fontSize:14,
+              fontWeight:'bold',
+              hover: {
+                backgroundColor:'#757575',
+                color:'#212121'
+              }
             }
           }
          }
