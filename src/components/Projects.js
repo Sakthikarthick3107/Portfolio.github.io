@@ -1,10 +1,12 @@
-import {  Button, Card,  CardActions, CardContent, CardHeader, CardMedia, Container,  Grid, Link,  Stack, Typography, useMediaQuery } from '@mui/material'
+import {  Button, Card,  CardActions, CardContent, CardHeader, CardMedia, CircularProgress, Container,  Grid, Link,  Stack, Typography, useMediaQuery } from '@mui/material'
 import React,{useRef , useState , useEffect} from 'react'
 import projects from '../images/projects.svg'
 import animateText from '../styles/animateText'
 import { Element } from 'react-scroll'
 import ProjectData from './ProjectData'
 import DraftData from './DraftData'
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 const Projects = () => {
   const animate = animateText()
@@ -13,6 +15,7 @@ const Projects = () => {
   const isMobileScreen = useMediaQuery('(max-width:600px')
   const [drafts , showDrafts] = useState(false)
 
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -41,6 +44,10 @@ const Projects = () => {
         <Stack direction='row' alignItems='center' justifyContent='center' spacing={2}>
             <img src={projects} alt='SkillIcon' style={{height:90,width:100}}/>
             <Typography variant='h3' textAlign='center'>My Works</Typography>
+        </Stack>
+        <Stack direction='row' display='flex' justifyContent='flex-end' mr={5}>
+          {!drafts && <Button variant='contained' onClick={()=>showDrafts(!drafts)}>Show more <KeyboardArrowDownIcon/></Button>}
+          { drafts&& <Button variant='contained' onClick={()=>showDrafts(!drafts)}>Show less <KeyboardArrowUpIcon/></Button>}
         </Stack>
 
         <div style={{height:50}}></div>
@@ -100,10 +107,8 @@ const Projects = () => {
           </Grid>
         </Container>
         <br/>
-
-        <Stack direction='row' display='flex' justifyContent='center'>
-            <Button variant='contained' onClick={()=>showDrafts(!drafts)}>Show Drafts</Button>
-        </Stack>
+            <CircularProgress/>
+        
 
         </div>
         <div style={{height:50}}></div>

@@ -11,7 +11,7 @@ const DraftData = [
         title : 'Online Crime Reporting System',
         subheader : 'A website application is for filing cases and view case status',
         image : crime,
-        content : 'A complex application for online crime reporting system with React Js and Django backend for authentication,data storing and retrieving and displaying details at frontend like a fullstack application!',
+        content : 'A complex application for online crime reporting system with React Js and Django backend for authentication,data storing and retrieving and displaying details at the frontend .',
         code: 'https://github.com/Sakthikarthick3107/crimeportal.github.io',
         live : ''
     },

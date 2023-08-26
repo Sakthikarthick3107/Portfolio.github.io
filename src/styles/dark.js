@@ -155,7 +155,9 @@ const dark = createTheme({
               fontSize:14,
               fontWeight:'bold',
               transition:'ease-in-out 3ms',
-              
+              ":hover":{
+                backgroundColor:'#455a64'
+              }
             }
           }
          }
