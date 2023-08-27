@@ -46,10 +46,10 @@ const Skills = () => {
             <Typography variant='h3'>Skills</Typography>
         </Stack>
         <div style={{height:50}}></div>
-        <Grid container  spacing={2} justifyContent='center'  alignContent='center' >
-            <Grid item lg={4} md={4} xs={6} >
+        <Grid container  spacing={3} justifyContent='center'  alignContent='center' >
+            <Grid item lg={4} md={6} sm={6} xs={12} >
                 <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
-                    <Typography variant='h6'>Programming</Typography><br/>
+                    <Typography variant='h6' fontWeight='bold'>Programming</Typography><br/>
                     
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='row' spacing={2}>
@@ -67,9 +67,9 @@ const Skills = () => {
                     
                 </Stack>
             </Grid>
-            <Grid item lg={4} md={4} xs={6}>
+            <Grid item lg={4} md={6} sm={6} xs={12}>
                 <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
-                    <Typography variant='h6'>Frontend Frameworks</Typography><br/>
+                    <Typography variant='h6' fontWeight='bold'>Frontend Frameworks</Typography><br/>
                     
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='row' spacing={2}>
@@ -85,9 +85,9 @@ const Skills = () => {
                     
                 </Stack>
             </Grid>
-            <Grid item lg={4} md={4} xs={6}>
+            <Grid item lg={4} md={6} sm={6} xs={12}>
                 <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
-                    <Typography variant='h6'>Backend Frameworks</Typography><br/>
+                    <Typography variant='h6' fontWeight='bold'>Backend Frameworks</Typography><br/>
                     
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='row' spacing={2}>
@@ -103,9 +103,9 @@ const Skills = () => {
                     
                 </Stack>
             </Grid>
-            <Grid item lg={4} md={4} xs={6}>
+            <Grid item lg={4} md={6} sm={6} xs={12}>
                 <Stack direction='column' spacing={2} display='flex' alignItems='center' justifyContent='center'>
-                    <Typography variant='h6'>Problem Solving</Typography><br/>
+                    <Typography variant='h6' fontWeight='bold'>Problem Solving</Typography><br/>
                     
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                     <Stack direction='column' spacing={1} >

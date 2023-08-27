@@ -121,7 +121,7 @@ const Education = () => {
 
           <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
             <Typography variant='h6'>Panimalar Engineering College</Typography>
-            <Typography variant='body1'>Scored 8.8cgpa from past 6 semesters</Typography>
+            <Typography variant='body1'>Scored 8.81cgpa from past 6 semesters</Typography>
           </div>
 
           </TimelineContent>

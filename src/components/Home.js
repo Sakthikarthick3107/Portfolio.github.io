@@ -23,14 +23,15 @@ const Home = () => {
     <div>
         <Box>
             <Grid container >
-                <Grid item lg={6} md={4} sm={12} textAlign='center'>
+                <Grid item lg={6} md={4} sm={12} xs={12} textAlign='center'>
                     
-                        <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}>
-                        <img src={myImage} alt='myImage'  width={650} height={420} />
-                        </div>
+                    <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}
+                       style={{display:'flex',justifyContent:'center'}} >
+                    <img src={myImage} alt='myImage'  width={620} height={420} />
+                    </div>
                     
                 </Grid>
-                <Grid item lg={6} md={8} sm={12}>
+                <Grid item lg={6} md={8} sm={12} xs={12}>
                     <Item>
                     <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
                         <br/><br/>

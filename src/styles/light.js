@@ -83,6 +83,7 @@ const light = createTheme({
           styleOverrides: {
             root: {
                 border:'solid 1px #b3e5fc',
+                maxWidth:380,
                 transition: 'transform 0.2s ease',
                 ":hover":{
                   transform: 'scale(1.02)',

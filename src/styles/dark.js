@@ -107,6 +107,7 @@ const dark = createTheme({
             root: {
                 border:'solid 1px #b3e5fc',
                 transition: 'transform 0.2s ease',
+                maxWidth:380,
                 ":hover":{
                   transform: 'scale(1.02)',
                 }
