@@ -1,28 +1,13 @@
-import crime from '../images/crime.svg'
-import tictactoe from '../images/tic-tac-toe.svg'
+
 import dashboard from '../images/dashboard.svg'
 import weather from '../images/weather.svg'
 import tshirt from '../images/tshirt.svg'
 import api from '../images/api.svg'
 import calculator  from '../images/calculator.svg'
+import form from '../images/form.svg'
 
 const DraftData = [
-    {
-        title : 'Online Crime Reporting System',
-        subheader : 'A website application is for filing cases and view case status',
-        image : crime,
-        content : 'A complex application for online crime reporting system with React Js and Django backend for authentication,data storing and retrieving and displaying details at the frontend .',
-        code: 'https://github.com/Sakthikarthick3107/crimeportal.github.io',
-        live : ''
-    },
-    {
-      title : 'Tic-tac-toe',
-      subheader : 'Simple entertainment game',
-      image : tictactoe,
-      content : 'A simple tic-tac-toe game is developed  with simple logics by using React',
-      code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list',
-      live : 'https://sakthikarthicks-tic-tac-toe.netlify.app/'
-    },
+    
     {
       title : 'Dashboard Design',
       subheader : '',
@@ -60,6 +45,14 @@ const DraftData = [
         subheader : '',
         image : calculator,
         content : 'A standard calculator used in daily life is designed with React.',
+        code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-4-Calculator',
+        live : 'https://sakthikarthicks-calculator.netlify.app/'
+      },
+      {
+        title : 'Registration Form',
+        subheader : 'A basic form for registering purpose.',
+        image : form,
+        content : 'Student Enrollment Registration Form and already enrolled students are displayed to everyone.',
         code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-4-Calculator',
         live : 'https://sakthikarthicks-calculator.netlify.app/'
       }
