@@ -60,7 +60,7 @@ const Projects = () => {
             <Grid item lg={4} md={4} sm={6} xs={12} key={index} >
             <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}
               style={{display:'flex' , justifyContent:'center',alignItems:'center'}}>
-            <Card>
+            <Card >
               <CardHeader  title={values.title} subheader={values.subheader}/>
               <CardMedia component='img' image={values.image} alt=''/>
               <CardContent>

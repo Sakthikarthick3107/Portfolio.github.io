@@ -53,8 +53,8 @@ const DraftData = [
         subheader : 'A basic form for registering purpose.',
         image : form,
         content : 'Student Enrollment Registration Form and already enrolled students are displayed to everyone.',
-        code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-4-Calculator',
-        live : 'https://sakthikarthicks-calculator.netlify.app/'
+        code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-3-student-enrollment-form',
+        live : 'https://sakthikarthicks-student-enrollment-form.vercel.app/'
       }
   ]
 
