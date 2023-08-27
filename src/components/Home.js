@@ -13,10 +13,32 @@ import github from '../images/github.svg'
 const Home = () => {
     const animate = animateText()
     const[visible , setVisible] = useState(false)
-
+    const[objective , setObjective] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const[showCursor,setShowCursor] = useState(true)
+    const blinkCursor = '|'
     useEffect(() => {
         setVisible(true)
     },[])
+
+    const sentence = "I am a fourth-year student majoring in Computer Science at Panimalar Engineering College. My commitment to learning is reflected in my dedication to applying theoretical knowledge to real-world projects. I am driven to achieve objectives through effective project execution and coordination. My academic journey has equipped me with a strong foundation, and I am eager to contribute my skills and expertise to practical applications.";
+    useEffect(() =>{
+        if(currentIndex < sentence.length){
+            const timeout = setTimeout(() =>{
+                setObjective((prev) => prev + sentence[currentIndex]);
+                setCurrentIndex(e  => e+1);
+
+            },10);
+            return () => clearTimeout(timeout)
+        }
+    },[currentIndex , sentence])
+
+    useEffect(()=>{
+        const blinking = setInterval(() =>{
+            setShowCursor(!showCursor)
+        },300);
+        return ()=> clearInterval(blinking)
+    },[showCursor])
     
 
   return (
@@ -32,16 +54,18 @@ const Home = () => {
                     
                 </Grid>
                 <Grid item lg={6} md={8} sm={12} xs={12}>
-                    <Item>
-                    <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
+                    
+                    
                         <br/><br/>
+                        <Stack direction='column' display='flex' justifyContent='flex-start' p={2}>
                         <Typography variant='h4'>Hello,I am</Typography>
                         <Typography variant='h2'>Sakthikarthick N</Typography>
-                        <Typography variant='h6'>
-                         currently pursuing 4th year BE Computer Science Department at Panimalar 
-                        Engineering College.A dedicated student willing to put knowledge into practice through projects and coordination 
-                        in order to achieve objectives.
-                        </Typography><br/>
+                        <Typography variant='h6' >
+                        {objective}&nbsp;{showCursor && blinkCursor}
+                        </Typography>
+                        
+                        <br/>
+                        {sentence === objective &&
                         <Stack direction='row'  spacing={0.5}>
                             <IconButton component={Link} href='https://www.instagram.com/__intelligent__psycho__/' 
                                 target='blank' ><img src={Instagram} alt='Instagram' style={{height:35,width:35}} /></IconButton>
@@ -54,9 +78,9 @@ const Home = () => {
                             <IconButton component={Link} href='https://github.com/Sakthikarthick3107' 
                                 target='blank'><img src={github} alt='Github' style={{height:38,width:38}} /></IconButton>
                         </Stack>
-                        
-                    </div>
-                    </Item>
+                            }
+                        </Stack>
+                    
                 </Grid>
             </Grid>
         </Box>

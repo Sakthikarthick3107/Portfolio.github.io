@@ -83,7 +83,7 @@ const light = createTheme({
           styleOverrides: {
             root: {
                 border:'solid 1px #b3e5fc',
-                maxWidth:380,
+                width:'90%',
                 transition: 'transform 0.2s ease',
                 ":hover":{
                   transform: 'scale(1.02)',
@@ -94,7 +94,8 @@ const light = createTheme({
          MuiCardHeader:{
             styleOverrides: {
               root: {
-                backgroundColor: '#42a5f5'
+                backgroundColor: '#42a5f5',
+                
               }
             }
          },
