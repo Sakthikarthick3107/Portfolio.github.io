@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import { CssBaseline,  createTheme } from "@mui/material";
+import { CssBaseline,  Grid,  createTheme } from "@mui/material";
 import dark from "./styles/dark";
 import { useState , useEffect} from "react";
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
@@ -63,12 +63,20 @@ function App() {
       
       <div className="App"  style={styles.container}>
       <ThemeProvider theme={theme}>
-        <CssBaseline/>
-        <NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} />
-        <Home/>
-        <Education/>
-        <Skills  />
-        <Projects />
+      <CssBaseline/>
+        <Grid container spacing={2}>
+          <Grid item  xs={12}><NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} /></Grid>
+          <Grid item  xs={12}><Home/></Grid>
+          <Grid item  xs={12}><Education/></Grid>
+          <Grid item  xs={12}><Skills  /></Grid>
+          <Grid item  xs={12}><Projects /></Grid>
+        </Grid>
+        
+        
+        
+        
+        
+        
         
         </ThemeProvider>
       </div>

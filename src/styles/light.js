@@ -8,15 +8,15 @@ const light = createTheme({
       },
       
     },
-    breakpoints: {
-      values: {
-        xs: 0, // Mobile devices
-        sm: 600, // Tablets and small screens
-        md: 960, // Desktop
-        lg: 1280, // Large desktops
-        xl: 1920, // Extra large desktops
-      },
-    },
+    // breakpoints: {
+    //   values: {
+    //     xs: 400, // Mobile devices
+    //     sm: 600, // Tablets and small screens
+    //     md: 960, // Desktop
+    //     lg: 1280, // Large desktops
+    //     xl: 1920, // Extra large desktops
+    //   },
+    // },
     
     components:{
 
@@ -36,7 +36,8 @@ const light = createTheme({
         MuiIconButton:{
             styleOverrides:{
                 root:{
-                    color:"black"
+                    color:"black",
+                    padding:0
                 }
             }
         },

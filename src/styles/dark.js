@@ -16,15 +16,15 @@ const dark = createTheme({
             color:'white'
         }
     },
-    breakpoints: {
-      values: {
-        xs: 0, // Mobile devices
-        sm: 600, // Tablets and small screens
-        md: 960, // Desktop
-        lg: 1280, // Large desktops
-        xl: 1920, // Extra large desktops
-      },
-    },
+    // breakpoints: {
+    //   values: {
+    //     xs: 0, // Mobile devices
+    //     sm: 600, // Tablets and small screens
+    //     md: 960, // Desktop
+    //     lg: 1280, // Large desktops
+    //     xl: 1920, // Extra large desktops
+    //   },
+    // },
     components:{
         MuiLink:{
             styleOverrides:{
@@ -98,7 +98,9 @@ const dark = createTheme({
            MuiIconButton:{
             styleOverrides:{
                 root:{
-                    color:"wheat"
+                    color:"wheat",
+                    padding:0
+
                 }
             }
         },

@@ -2,12 +2,12 @@ import { Box, Grid, IconButton, Link, Stack, Typography } from '@mui/material'
 import React, { useState ,useEffect} from 'react'
 import myImage from '../images/mypic.png'
 import Item from '../styles/Item'
-import Instagram from '../images/instagram.svg'
-import LinkedIn from '../images/linkedin.svg'
-import Mail from '../images/mail.svg'
+import Instagram from '../images/instagram.png'
+import LinkedIn from '../images/linkedin.png'
+import Mail from '../images/mail.png'
 import animateText from '../styles/animateText';
 import codechef from  '../images/codechefavatar.jpg'
-import github from '../images/github.svg'
+import github from '../images/github.png'
 
 
 const Home = () => {
@@ -57,7 +57,7 @@ const Home = () => {
                     
                     
                         <br/><br/>
-                        <Stack direction='column' display='flex' justifyContent='flex-start' p={2}>
+                        <Stack direction='column' display='flex' justifyContent='flex-start' m={5}>
                         <Typography variant='h4'>Hello,I am</Typography>
                         <Typography variant='h2'>Sakthikarthick N</Typography>
                         <Typography variant='h6' >
@@ -66,17 +66,17 @@ const Home = () => {
                         
                         <br/>
                         {sentence === objective &&
-                        <Stack direction='row'  spacing={0.5}>
+                        <Stack direction='row' spacing={1}>
                             <IconButton component={Link} href='https://www.instagram.com/__intelligent__psycho__/' 
-                                target='blank' ><img src={Instagram} alt='Instagram' style={{height:35,width:35}} /></IconButton>
+                                target='blank' ><img src={Instagram} alt='Instagram' style={{height:60,width:60}} /></IconButton>
                             <IconButton  component={Link} href='https://www.linkedin.com/in/sakthikarthick-nagendran-5b5050229/' 
-                                target='blank'><img src={LinkedIn} alt='LinkedIn' style={{height:40,width:40}} /></IconButton>
+                                target='blank'><img src={LinkedIn} alt='LinkedIn' style={{height:60,width:60}} /></IconButton>
                             <IconButton component={Link} href='mailto:sakthikarthick3107@gmail.com' 
-                                target='blank'><img src={Mail} alt='Mail' style={{height:40,width:40}} /></IconButton>
+                                target='blank'><img src={Mail} alt='Mail' style={{height:60,width:60}} /></IconButton>
                             <IconButton component={Link} href='https://www.codechef.com/users/sakthikarthi' 
-                                target='blank'><img src={codechef} alt='Codechef' style={{height:40,width:40}} /></IconButton>
+                                target='blank'><img src={codechef} alt='Codechef' style={{height:47,width:47,borderRadius:'50%'}}  /></IconButton>
                             <IconButton component={Link} href='https://github.com/Sakthikarthick3107' 
-                                target='blank'><img src={github} alt='Github' style={{height:38,width:38}} /></IconButton>
+                                target='blank'><img src={github} alt='Github' style={{height:50,width:50}} /></IconButton>
                         </Stack>
                             }
                         </Stack>

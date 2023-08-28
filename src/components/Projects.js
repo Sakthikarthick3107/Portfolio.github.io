@@ -58,8 +58,9 @@ const Projects = () => {
 
         {ProjectData.map((values,index) =>(
             <Grid item lg={4} md={4} sm={6} xs={12} key={index} >
-            <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}
-              style={{display:'flex' , justifyContent:'center',alignItems:'center'}}>
+            {/* <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}
+              style={{display:'flex' , justifyContent:'center',alignItems:'center'}}> */}
+              <div style={{display:'flex' , justifyContent:'center',alignItems:'center'}}>
             <Card >
               <CardHeader  title={values.title} subheader={values.subheader}/>
               <CardMedia component='img' image={values.image} alt=''/>
@@ -75,6 +76,7 @@ const Projects = () => {
               </CardActions>
             </Card>
             </div>
+            {/* </div> */}
           </Grid>
         ))
           
@@ -83,8 +85,9 @@ const Projects = () => {
           {drafts&&<>
           {DraftData.map((values , index)=>(
             <Grid item lg={4} md={4} sm={6} xs={12} key={index} >
-            <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}
-                style={{display:'flex' , justifyContent:'center',alignItems:'center'}}>
+            {/* <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}
+                style={{display:'flex' , justifyContent:'center',alignItems:'center'}}> */}
+            <div style={{display:'flex' , justifyContent:'center',alignItems:'center'}}>
             <Card>
                 <CardHeader  title={values.title} subheader={values.subheader}/>
                 <CardMedia component='img' image={values.image} alt=''/>
@@ -100,6 +103,7 @@ const Projects = () => {
                 </CardActions>
               </Card>
               </div>
+              {/* </div> */}
             </Grid>
 
           ))}
