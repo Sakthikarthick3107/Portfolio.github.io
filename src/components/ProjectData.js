@@ -52,7 +52,7 @@ const ProjectData =[
     image : tictactoe,
     content : 'A simple tic-tac-toe game is developed  with simple logics by using React',
     code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list',
-    live : 'https://sakthikarthicks-tic-tac-toe.netlify.app/'
+    live : 'https://sakthikarthicks-tic-tac-toe.vercel.app/'
   },
   
   ]
