@@ -46,8 +46,8 @@ const Projects = () => {
             <Typography variant='h3' textAlign='center'>My Works</Typography>
         </Stack>
         <Stack direction='row' display='flex' justifyContent='flex-end' mr={5}>
-          {!drafts && <Button variant='contained' onClick={()=>showDrafts(!drafts)}>Show more <KeyboardArrowDownIcon/></Button>}
-          { drafts&& <Button variant='contained' onClick={()=>showDrafts(!drafts)}>Show less <KeyboardArrowUpIcon/></Button>}
+          {!drafts && <Button variant='contained' onClick={()=>showDrafts(!drafts)}>Show Drafts <KeyboardArrowDownIcon/></Button>}
+          { drafts&& <Button variant='contained' onClick={()=>showDrafts(!drafts)}>Hide Drafts <KeyboardArrowUpIcon/></Button>}
         </Stack>
 
         <div style={{height:50}}></div>
@@ -63,7 +63,9 @@ const Projects = () => {
               <div style={{display:'flex' , justifyContent:'center',alignItems:'center'}}>
             <Card >
               <CardHeader  title={values.title} subheader={values.subheader}/>
-              <CardMedia component='img' image={values.image} alt=''/>
+              <div style={{display:'flex' ,  justifyContent:'center' , alignItems:'center'}}>
+                <CardMedia component='img' image={values.image} alt=''/>
+              </div>
               <CardContent>
                 
                     {values.content}
@@ -90,7 +92,9 @@ const Projects = () => {
             <div style={{display:'flex' , justifyContent:'center',alignItems:'center'}}>
             <Card>
                 <CardHeader  title={values.title} subheader={values.subheader}/>
+                <div style={{display:'flex' ,  justifyContent:'center' , alignItems:'center'}}>
                 <CardMedia component='img' image={values.image} alt=''/>
+                </div>
                 <CardContent>
                   
                     {values.content}

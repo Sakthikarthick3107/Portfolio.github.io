@@ -1,4 +1,4 @@
-import { Avatar, Container, Stack, Typography } from '@mui/material'
+import { Avatar, Container, Grid, Stack, Typography } from '@mui/material'
 import React, {useState ,  useEffect , useRef} from 'react'
 import { Timeline, TimelineItem ,TimelineConnector, TimelineContent, TimelineDot, TimelineSeparator ,TimelineOppositeContent} from '@mui/lab';
 import animateText from '../styles/animateText';
@@ -41,62 +41,61 @@ const Education = () => {
       <Avatar src={EducationIcon} alt='EducationAvatar' sx={{height:100,width:100}} />
       <Typography variant='h3'>Education</Typography><br/>
       </Stack>
-      <Container maxWidth={isMobileScreen? 'xs' :'md'} >
+      <Container maxWidth={isMobileScreen ? 'sm' :  'md'} >
       <Timeline>
 
         <TimelineItem>
-          <TimelineOppositeContent>
-          <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}>
-            <Typography variant='h6' fontWeight='bold'>SSLC&nbsp;</Typography>
-            <Typography variant='body2' >(2017 - 2018)&nbsp;</Typography>
-          </div>
-          </TimelineOppositeContent>
+          <Grid container>
+            <Grid item xs={3} sm={4} md={5}>
+              <TimelineOppositeContent>
+                <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}>
+                  <Typography variant='h6' fontWeight='bold'>SSLC</Typography>
+                  <Typography variant='body2' >(2017 - 2018)</Typography>
+                </div>
+              </TimelineOppositeContent>
+            </Grid>
+
+          <Grid item xs={1} sm={1} md={2} display='flex' justifyContent='center'>
           <TimelineSeparator>
             <TimelineDot color='success'/>
             <TimelineConnector/>
           </TimelineSeparator>
-          <TimelineContent>
+          </Grid>
 
-          <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
-            <Typography variant='h6'>S.B.K.K.S.S.Thiyagarajan Memorial Matriculation School,Aruppukottai</Typography>
-            <Typography variant='body1'>Scored 95.2%</Typography>
-          </div>
+          <Grid item xs={6} sm={6} md={5}>
+          <TimelineContent>
+            <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
+              <Typography variant='h6'>S.B.K.K.S.S.Thiyagarajan Memorial Matriculation School,Aruppukottai</Typography>
+              <Typography variant='body1'>Scored 95.2%</Typography>
+            </div>
 
           </TimelineContent>
+          </Grid>
+          </Grid>
         </TimelineItem>
 
-        <TimelineItem>
-          <TimelineOppositeContent>
-          <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}>
-            <Typography variant='h6' fontWeight='bold'>HSC 1st&nbsp;</Typography>
-            <Typography variant='body2' >(2018 - 2019)&nbsp;</Typography>
-          </div>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineDot color='success' />
-            <TimelineConnector/>
-          </TimelineSeparator>
-          <TimelineContent>
-
-          <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
-            <Typography variant='h6'>S.B.K.Higher Secondary School,Aruppukottai</Typography>
-            <Typography variant='body1'>Scored 76.3%</Typography>
-          </div>
-
-          </TimelineContent>
-        </TimelineItem>
+        
 
         <TimelineItem>
+        <Grid container>
+            <Grid item xs={3} sm={4} md={5}>
           <TimelineOppositeContent>
           <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}>
-            <Typography variant='h6' fontWeight='bold'>HSC 2nd&nbsp;</Typography>
+            <Typography variant='h6' fontWeight='bold'>HSC &nbsp;</Typography>
             <Typography variant='body2' >(2019 - 2020)&nbsp;</Typography>
           </div>
           </TimelineOppositeContent>
+          </Grid>
+
+          <Grid item xs={1} sm={1} md={2} display='flex' justifyContent='center'>
           <TimelineSeparator>
             <TimelineDot color='success'/>
             <TimelineConnector/>
           </TimelineSeparator>
+          </Grid>
+
+          
+            <Grid item xs={6} sm={6} md={5}>
           <TimelineContent>
 
           <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
@@ -104,9 +103,13 @@ const Education = () => {
             <Typography variant='body1'>Scored 87.17%</Typography>
           </div>
           </TimelineContent>
+          </Grid>
+          </Grid>
         </TimelineItem>
 
         <TimelineItem>
+        <Grid container>
+            <Grid item xs={3} sm={4} md={5}>
           <TimelineOppositeContent>
           <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}>
             <Typography variant='h6' fontWeight='bold'>B.E&nbsp;</Typography>
@@ -114,9 +117,15 @@ const Education = () => {
             <Typography variant='body2' >(2020 - 2024)now in the final year&nbsp;</Typography>
           </div>
           </TimelineOppositeContent>
+          </Grid>
+
+          <Grid item xs={1} sm={1} md={2} display='flex' justifyContent='center'>
           <TimelineSeparator>
             <TimelineDot color='info' />
           </TimelineSeparator>
+          </Grid>
+
+          <Grid item xs={6} sm={6} md={5}>
           <TimelineContent>
 
           <div className={`${animate.rightContainer} ${visible ? animate.rightContainerVisible:''}`}>
@@ -125,6 +134,8 @@ const Education = () => {
           </div>
 
           </TimelineContent>
+          </Grid>
+          </Grid>
         </TimelineItem>
 
       </Timeline>

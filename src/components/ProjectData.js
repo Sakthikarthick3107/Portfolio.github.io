@@ -31,12 +31,12 @@ const ProjectData =[
       live : 'null'
     },
     {
-      title : 'To-do-list',
-      subheader : 'Simple tool for note down our daily tasks and summarize',
-      image : notes,
-      content : 'A simple to-do-list with neat user interfaces and features',
+      title : 'Tic-tac-toe',
+      subheader : 'Simple entertainment game',
+      image : tictactoe,
+      content : 'A simple tic-tac-toe game is developed  with simple logics by using React',
       code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list',
-      live : 'https://sakthikarthicks-to-do-list.netlify.app/'
+      live : 'https://sakthikarthicks-tic-tac-toe.vercel.app/'
     },
     {
       title : 'Online Crime Reporting System',
@@ -47,13 +47,14 @@ const ProjectData =[
       live : ''
   },
   {
-    title : 'Tic-tac-toe',
-    subheader : 'Simple entertainment game',
-    image : tictactoe,
-    content : 'A simple tic-tac-toe game is developed  with simple logics by using React',
+    title : 'To-do-list',
+    subheader : 'Simple tool for note down our daily tasks and summarize',
+    image : notes,
+    content : 'A simple to-do-list with neat user interfaces and features',
     code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list',
-    live : 'https://sakthikarthicks-tic-tac-toe.vercel.app/'
-  },
+    live : 'https://sakthikarthicks-to-do-list.netlify.app/'
+  }
+  
   
   ]
 export default ProjectData

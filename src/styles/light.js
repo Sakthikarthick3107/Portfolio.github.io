@@ -85,9 +85,12 @@ const light = createTheme({
             root: {
                 border:'solid 1px #b3e5fc',
                 width:'90%',
+                backgroundColor:'#757575',
                 transition: 'transform 0.2s ease',
+                
                 ":hover":{
                   transform: 'scale(1.02)',
+                  boxShadow:'2px 2px 10px 5px #80d8ff',
                 }
             }
           }
@@ -106,10 +109,16 @@ const light = createTheme({
               height: 150,
               width: 150,
               display:'block',
-              marginLeft:  'auto',
-              marginRight:'auto'
             }
           }
+         },
+         MuiCardContent:{
+            styleOverrides:{
+              root:{
+                color:'white',
+                backgroundColor:'#757575' 
+              }
+            }
          },
          MuiCardActions:{
           styleOverrides: {

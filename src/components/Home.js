@@ -45,15 +45,15 @@ const Home = () => {
     <div>
         <Box>
             <Grid container >
-                <Grid item lg={6} md={4} sm={12} xs={12} textAlign='center'>
+                <Grid item lg={5} md={5} sm={12} xs={12} textAlign='center'>
                     
                     <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}
                        style={{display:'flex',justifyContent:'center'}} >
-                    <img src={myImage} alt='myImage'  width={620} height={420} />
+                    <img src={myImage} alt='myImage'  width={300} height={400} />
                     </div>
                     
                 </Grid>
-                <Grid item lg={6} md={8} sm={12} xs={12}>
+                <Grid item lg={7} md={7} sm={12} xs={12}>
                     
                     
                         <br/><br/>

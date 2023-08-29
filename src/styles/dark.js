@@ -112,6 +112,7 @@ const dark = createTheme({
                 width:'90%',
                 ":hover":{
                   transform: 'scale(1.02)',
+                  boxShadow:'2px 2px 10px 5px lightblue',
                 }
             }
           }
