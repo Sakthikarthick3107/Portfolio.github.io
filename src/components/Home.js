@@ -45,7 +45,7 @@ const Home = () => {
     <div>
         <Box>
             <Grid container >
-                <Grid item lg={5} md={5} sm={12} xs={12} textAlign='center'>
+                <Grid item lg={5} md={5} sm={12} xs={9} textAlign='center'>
                     
                     <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}
                        style={{display:'flex',justifyContent:'center'}} >
