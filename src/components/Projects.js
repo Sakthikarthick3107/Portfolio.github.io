@@ -1,4 +1,4 @@
-import {  Button, Card,  CardActions, CardContent, CardHeader, CardMedia, CircularProgress, Container,  Grid, Link,  Stack, Typography, useMediaQuery } from '@mui/material'
+import {  Button, Card,  CardActions, CardContent, CardHeader, CardMedia,  Container,  Grid, Link,  Stack, Typography, useMediaQuery } from '@mui/material'
 import React,{useRef , useState , useEffect} from 'react'
 import projects from '../images/projects.svg'
 import animateText from '../styles/animateText'
@@ -117,7 +117,7 @@ const Projects = () => {
           </Grid>
         </Container>
         <br/>
-            <CircularProgress/>
+            
         
 
         </div>
