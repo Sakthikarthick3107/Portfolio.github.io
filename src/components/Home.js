@@ -5,21 +5,18 @@ import Item from '../styles/Item'
 import Instagram from '../images/instagram.png'
 import LinkedIn from '../images/linkedin.png'
 import Mail from '../images/mail.png'
-import animateText from '../styles/animateText';
 import codechef from  '../images/codechefavatar.jpg'
 import github from '../images/github.png'
 
 
 const Home = () => {
-    const animate = animateText()
-    const[visible , setVisible] = useState(false)
+
+    
     const[objective , setObjective] = useState('');
     const [currentIndex, setCurrentIndex] = useState(0);
     const[showCursor,setShowCursor] = useState(true)
     const blinkCursor = '|'
-    useEffect(() => {
-        setVisible(true)
-    },[])
+    
 
     const sentence = "I am a fourth-year student majoring in Computer Science at Panimalar Engineering College. My commitment to learning is reflected in my dedication to applying theoretical knowledge to real-world projects. I am driven to achieve objectives through effective project execution and coordination. My academic journey has equipped me with a strong foundation, and I am eager to contribute my skills and expertise to practical applications.";
     useEffect(() =>{
@@ -47,7 +44,7 @@ const Home = () => {
             <Grid container >
                 <Grid item lg={5} md={5} sm={12} xs={9} textAlign='center'>
                     
-                    <div className={`${animate.leftContainer} ${visible ? animate.leftContainerVisible:''}`}
+                    <div
                        style={{display:'flex',justifyContent:'center'}} >
                     <img src={myImage} alt='myImage'  width={300} height={400} />
                     </div>

@@ -64,20 +64,13 @@ function App() {
       <div className="App"  style={styles.container}>
       <ThemeProvider theme={theme}>
       <CssBaseline/>
-        <Grid container spacing={2}>
-          <Grid item  xs={12}><NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} /></Grid>
-          <Grid item  xs={12}><Home/></Grid>
-          <Grid item  xs={12}><Education/></Grid>
-          <Grid item  xs={12}><Skills  /></Grid>
-          <Grid item  xs={12}><Projects /></Grid>
-        </Grid>
         
-        
-        
-        
-        
-        
-        
+          <NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} />
+          <Home/>
+          <Education/>
+          <Skills  />
+          <Projects />
+     
         </ThemeProvider>
       </div>
     
