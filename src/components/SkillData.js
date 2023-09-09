@@ -8,6 +8,11 @@ import html from '../images/html.png'
 import css from '../images/css.png'
 import javascript  from '../images/javascript.png'
 import react from '../images/react.png'
+import vscode from '../images/vscode.png'
+import git from '../images/git.png'
+import tailwind from '../images/tailwind.png'
+import nodejs from '../images/nodejs.png'
+import mysql from '../images/mysql.png'
 
 const SkillData ={
     "Programming":[
@@ -46,6 +51,10 @@ const SkillData ={
             name:'Material UI',
             image:mui
         },
+        {
+            name:'Tailwind CSS',
+            image:tailwind
+        }
     ],
 
     "Backend":[
@@ -53,11 +62,31 @@ const SkillData ={
             name:'Django',
             image:django
         },
+        {
+            name:'Node Js',
+            image:nodejs
+        }
     ],
     "Problem Solving":[
         {
             name:'Code Chef',
             image:codechef
+        }
+    ],
+    "Tools":[
+        {
+            name:'Visual Studio Code',
+            image: vscode
+        },
+        {
+            name : 'Git',
+            image : git
+        }
+    ],
+    "Databases":[
+        {
+            name:'MySql',
+            image : mysql
         }
     ]
 }

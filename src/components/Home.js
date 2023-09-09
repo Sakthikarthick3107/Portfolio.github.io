@@ -73,7 +73,7 @@ const Home = () => {
                             <IconButton component={Link} href='https://www.codechef.com/users/sakthikarthi' 
                                 target='blank'><img src={codechef} alt='Codechef' style={{height:47,width:47,borderRadius:'50%'}}  /></IconButton>
                             <IconButton component={Link} href='https://github.com/Sakthikarthick3107' 
-                                target='blank'><img src={github} alt='Github' style={{height:50,width:50}} /></IconButton>
+                                target='blank'><img src={github} alt='Github' style={{height:45,width:45}} /></IconButton>
                         </Stack>
                             }
                         </Stack>

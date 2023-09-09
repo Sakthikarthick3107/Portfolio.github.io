@@ -1,4 +1,4 @@
-import { createTheme} from "@mui/material";
+import { createTheme, keyframes} from "@mui/material";
 
 const light = createTheme({
     shadows:['none'],
@@ -8,19 +8,9 @@ const light = createTheme({
       },
       
     },
-    // breakpoints: {
-    //   values: {
-    //     xs: 400, // Mobile devices
-    //     sm: 600, // Tablets and small screens
-    //     md: 960, // Desktop
-    //     lg: 1280, // Large desktops
-    //     xl: 1920, // Extra large desktops
-    //   },
-    // },
-    
+  
     components:{
-
-        MuiLink:{
+      MuiLink:{
             styleOverrides:{
                 root:{
                     textDecoration:'none',
@@ -33,6 +23,7 @@ const light = createTheme({
                 
             }
         },
+        
         MuiIconButton:{
             styleOverrides:{
                 root:{
@@ -141,7 +132,7 @@ const light = createTheme({
             }
           }
          }
-    }
+    },
 })
 light.shadows[1] = light.shadows[0]
 light.shadows[4] = light.shadows[0]

@@ -10,7 +10,7 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
     const handleChange = (event, newValue) => {
     setValue(newValue);
      };
-     const isMobileScreen = useMediaQuery('(max-width:600px')
+     const isMobileScreen = useMediaQuery('(max-width:600px)')
 
     
 

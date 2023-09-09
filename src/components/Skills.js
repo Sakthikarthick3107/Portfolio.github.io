@@ -31,7 +31,13 @@ const Skills = () => {
                         {SkillData[category].map((item , index )=>(
                             <Grid item lg={3} md={4} sm={6} display='flex' justifyContent='center'>
                                 <Tooltip title={item.name} arrow key={index}> 
-                                <img alt='' style={{height:80,maxWidth:100}} src={item.image}/>
+                                <img alt='' style={{
+                                    height:80,
+                                    maxWidth:100,
+                                    transition: 'transform ease-in-out 200ms',
+                                    }} src={item.image}
+                                    onMouseOver={(e)=>e.currentTarget.style.transform='scale(1.15)'}
+                                    onMouseOut={(e) =>  e.currentTarget.style.transform='scale(1)'} />
                                 </Tooltip>
                             </Grid>
                             ))}
