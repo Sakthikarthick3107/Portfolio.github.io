@@ -7,6 +7,7 @@ import LinkedIn from '../images/linkedin.png'
 import Mail from '../images/mail.png'
 import codechef from  '../images/codechefavatar.jpg'
 import github from '../images/github.png'
+import IconEffect from '../styles/IconEffect'
 
 
 const Home = () => {
@@ -37,16 +38,17 @@ const Home = () => {
         return ()=> clearInterval(blinking)
     },[showCursor])
     
+    const effect = IconEffect();
 
   return (
     <div>
         <Box>
-            <Grid container >
+            <Grid container display='flex' justifyContent='center'  alignItems='center'>
                 <Grid item lg={5} md={5} sm={12} xs={9} textAlign='center'>
                     
                     <div
-                       style={{display:'flex',justifyContent:'center'}} >
-                    <img src={myImage} alt='myImage'  width={300} height={400} />
+                       style={{display:'flex',justifyContent:'center' , alignItems:'center'}} >
+                    <img  src={myImage} alt='myImage'  width={300} height={350} />
                     </div>
                     
                 </Grid>
@@ -65,15 +67,13 @@ const Home = () => {
                         {sentence === objective &&
                         <Stack direction='row' spacing={1}>
                             <IconButton component={Link} href='https://www.instagram.com/__intelligent__psycho__/' 
-                                target='blank' ><img src={Instagram} alt='Instagram' style={{height:60,width:60}} /></IconButton>
+                                target='blank'  ><img className={effect.root} src={Instagram} alt='Instagram'  /></IconButton>
                             <IconButton  component={Link} href='https://www.linkedin.com/in/sakthikarthick-nagendran-5b5050229/' 
-                                target='blank'><img src={LinkedIn} alt='LinkedIn' style={{height:60,width:60}} /></IconButton>
+                                target='blank' ><img className={effect.root} src={LinkedIn} alt='LinkedIn'  /></IconButton>
                             <IconButton component={Link} href='mailto:sakthikarthick3107@gmail.com' 
-                                target='blank'><img src={Mail} alt='Mail' style={{height:60,width:60}} /></IconButton>
-                            <IconButton component={Link} href='https://www.codechef.com/users/sakthikarthi' 
-                                target='blank'><img src={codechef} alt='Codechef' style={{height:47,width:47,borderRadius:'50%'}}  /></IconButton>
+                                target='blank' ><img className={effect.root} src={Mail} alt='Mail'  /></IconButton>
                             <IconButton component={Link} href='https://github.com/Sakthikarthick3107' 
-                                target='blank'><img src={github} alt='Github' style={{height:45,width:45}} /></IconButton>
+                                target='blank' ><img className={effect.root} src={github} alt='Github'  /></IconButton>
                         </Stack>
                             }
                         </Stack>

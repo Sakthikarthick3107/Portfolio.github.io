@@ -1,13 +1,30 @@
-import {  Grid, Stack, Tooltip, Typography } from '@mui/material'
+import {  Grid, Stack, Tooltip, Typography, useMediaQuery } from '@mui/material'
 import React from 'react'
 import skill from '../images/skills.svg'
 import { Element } from 'react-scroll'
 
 import SkillData from './SkillData'
+import IconEffect from '../styles/IconEffect'
 
 const Skills = () => {
-  
+  const effect = IconEffect();
+  const isMobileScreen = useMediaQuery('(max-width:600px)');
+  const js = [];
 
+  
+    for (const category in SkillData) {
+    SkillData[category].forEach(skill => {
+      js.push({
+        
+          name: skill.name,
+          image: skill.image
+        
+      });
+    });
+  }
+  console.log(js)
+
+  
  
   return (
     <Element name='skills'>
@@ -20,6 +37,18 @@ const Skills = () => {
 
         <Grid container  spacing={3} justifyContent='center'  alignContent='center' >
         
+        {isMobileScreen?
+        <>
+        {js.map((item,index)=>(
+            <Grid item sm={4} display='flex' justifyContent='center' key={index}>
+                <Tooltip title={item.name} arrow key={index}> 
+                <img src={item.image} alt='' className={effect.root}/>
+                </Tooltip>
+            </Grid>
+        ))}
+        </>
+        :
+        <>
         {Object.keys(SkillData).map(category =>(
         <Grid item lg={4} md={6} sm={6} xs={12} key = {category} >
                 <Stack direction='column' display='flex' alignItems='center' justifyContent='center'>
@@ -31,13 +60,7 @@ const Skills = () => {
                         {SkillData[category].map((item , index )=>(
                             <Grid item lg={3} md={4} sm={6} display='flex' justifyContent='center'>
                                 <Tooltip title={item.name} arrow key={index}> 
-                                <img alt='' style={{
-                                    height:80,
-                                    maxWidth:100,
-                                    transition: 'transform ease-in-out 200ms',
-                                    }} src={item.image}
-                                    onMouseOver={(e)=>e.currentTarget.style.transform='scale(1.15)'}
-                                    onMouseOut={(e) =>  e.currentTarget.style.transform='scale(1)'} />
+                                <img src={item.image} alt='' className={effect.root}/>
                                 </Tooltip>
                             </Grid>
                             ))}
@@ -45,6 +68,7 @@ const Skills = () => {
                     </div>
                 </Stack>
             </Grid>))}
+            </>}
         </Grid>
         </div>
         <div style={{height:150}}></div>

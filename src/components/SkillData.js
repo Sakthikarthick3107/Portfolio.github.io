@@ -13,6 +13,7 @@ import git from '../images/git.png'
 import tailwind from '../images/tailwind.png'
 import nodejs from '../images/nodejs.png'
 import mysql from '../images/mysql.png'
+import postman from '../images/postman.png'
 
 const SkillData ={
     "Programming":[
@@ -81,6 +82,10 @@ const SkillData ={
         {
             name : 'Git',
             image : git
+        },
+        {
+            name : 'Postman',
+            image : postman
         }
     ],
     "Databases":[

@@ -101,7 +101,7 @@ const Education = () => {
 
           <Grid item xs={1} sm={1} md={2} display='flex' justifyContent='center'>
           <TimelineSeparator>
-            <TimelineDot color='info' />
+            <TimelineDot color='info'  />
           </TimelineSeparator>
           </Grid>
 
