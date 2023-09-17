@@ -1,7 +1,7 @@
 import hen from '../images/blogo.png'
 import resume from '../images/resume.svg'
 import authenticate from '../images/laptop-security.svg'
-import notes from '../images/notes.svg'
+import apple from '../images/apple.svg'
 import crime from '../images/crime.svg'
 import tictactoe from '../images/tic-tac-toe.svg'
 
@@ -31,6 +31,14 @@ const ProjectData =[
       live : 'null'
     },
     {
+      title : 'Apple Products(E-commerce site)',
+      subheader : 'A website for showcasing apple products',
+      image : apple,
+      content : 'An intermediate website for displaying,adding to cart and checkout features was developed using Vue Js , TailwindCss and Firebase',
+      code: 'https://github.com/Sakthikarthick3107/apple-products-page',
+      live : 'https://sakthikarthick-apple-products-page.vercel.app/'
+    },
+    {
       title : 'Tic-tac-toe',
       subheader : 'Simple entertainment game',
       image : tictactoe,
@@ -46,14 +54,7 @@ const ProjectData =[
       code: 'https://github.com/Sakthikarthick3107/crimeportal.github.io',
       live : ''
   },
-  {
-    title : 'To-do-list',
-    subheader : 'Simple tool for note down our daily tasks and summarize',
-    image : notes,
-    content : 'A simple to-do-list with neat user interfaces and features',
-    code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list',
-    live : 'https://sakthikarthicks-to-do-list.netlify.app/'
-  }
+  
   
   
   ]

@@ -1,4 +1,4 @@
-
+import notes from '../images/notes.svg'
 import dashboard from '../images/dashboard.svg'
 import weather from '../images/weather.svg'
 import tshirt from '../images/tshirt.svg'
@@ -7,7 +7,14 @@ import calculator  from '../images/calculator.svg'
 import form from '../images/form.svg'
 
 const DraftData = [
-    
+  {
+    title : 'To-do-list',
+    subheader : 'Simple tool for note down our daily tasks and summarize',
+    image : notes,
+    content : 'A simple to-do-list with neat user interfaces and features',
+    code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list',
+    live : 'https://sakthikarthicks-to-do-list.netlify.app/'
+  },
     {
       title : 'Dashboard Design',
       subheader : '',
