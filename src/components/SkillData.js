@@ -14,6 +14,8 @@ import tailwind from '../images/tailwind.png'
 import nodejs from '../images/nodejs.png'
 import mysql from '../images/mysql.png'
 import postman from '../images/postman.png'
+import vue from '../images/vue.png'
+import vuetify from '../images/vuetify.svg'
 
 const SkillData ={
     "Programming":[
@@ -49,12 +51,20 @@ const SkillData ={
         image:react
         },
         {
+            name: 'Vue Js',
+            image : vue
+        },
+        {
             name:'Material UI',
             image:mui
         },
         {
             name:'Tailwind CSS',
             image:tailwind
+        },
+        {
+            name : 'Vuetify',
+            image : vuetify
         }
     ],
 
