@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Link, Stack, Typography } from '@mui/material'
+import { Box, Grid, IconButton, Link, Stack, Typography ,useMediaQuery} from '@mui/material'
 import React, { useState ,useEffect} from 'react'
 import myImage from '../images/mypic.png'
 import Item from '../styles/Item'
@@ -11,33 +11,62 @@ import IconEffect from '../styles/IconEffect'
 
 
 const Home = () => {
-
-    
-    const[objective , setObjective] = useState('');
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const[showCursor,setShowCursor] = useState(true)
-    const blinkCursor = '|'
-    
-
-    const sentence = "I am a fourth-year student majoring in Computer Science at Panimalar Engineering College. My commitment to learning is reflected in my dedication to applying theoretical knowledge to real-world projects. I am driven to achieve objectives through effective project execution and coordination. My academic journey has equipped me with a strong foundation, and I am eager to contribute my skills and expertise to practical applications.";
+    const domains = ['Frontend Developer' , 'Backend Developer' , 'Native App Developer' , 'Web Designer' , ''];
+    const [domainIndex , setDomainIndex] = useState(0);
+    const [currentWord , setCurrentWord] = useState(domains[domainIndex]);
+    const [currentWordIndex, setCurrentWordIndex] = useState(0);
+    const [displayWord, setDisplayWord] = useState('');
+    const [isTyping , setIsTyping] = useState(true);
+    const[showCursor , setShowCursor] = useState(false);
+    const sentence = "excelling in web development, mobile app development, and creative problem-solving, with a commitment to applying theoretical knowledge in practical projects and contributing to their success through effective execution and coordination.";
+    const isMobileScreen = useMediaQuery('(max-width:500px)')
     useEffect(() =>{
-        if(currentIndex < sentence.length){
-            const timeout = setTimeout(() =>{
-                setObjective((prev) => prev + sentence[currentIndex]);
-                setCurrentIndex(e  => e+1);
-
-            },10);
-            return () => clearTimeout(timeout)
+        if(isTyping){
+            const typing = setInterval(() =>{
+                if(currentWord !== displayWord ){
+                    setDisplayWord(prev => prev + currentWord[currentWordIndex]);
+                    setCurrentWordIndex(prev => prev + 1);
+                }
+                else{
+                    clearInterval(typing);
+                    setTimeout(() => {
+                        setIsTyping(false);
+                    },1000)
+                    
+                }
+            },35);
+            return () => clearInterval(typing)
         }
-    },[currentIndex , sentence])
-
-    useEffect(()=>{
-        const blinking = setInterval(() =>{
-            setShowCursor(!showCursor)
+        else{
+            const erasing = setInterval(() =>{
+                if(currentWordIndex >= 0){
+                    setDisplayWord(prev => currentWord.slice(0 , currentWordIndex));
+                    setCurrentWordIndex(prev => prev - 1);
+                }
+                else{
+                    clearInterval(erasing);
+                    setIsTyping(true);
+                    setCurrentWordIndex(prev => 0);
+                    if(domainIndex === domains.length - 1){
+                        setDomainIndex(0);
+                        setCurrentWord(domains[0]);
+                    }
+                    else{
+                        setDomainIndex(prev => prev + 1);
+                        setCurrentWord(domains[domainIndex]);
+                    }
+                    
+                }
+            },35);
+            return () => clearInterval(erasing);
+        }        
+    })
+    useEffect(() => {
+        setTimeout(() =>{
+            setShowCursor(!showCursor);
         },300);
-        return ()=> clearInterval(blinking)
-    },[showCursor])
-    
+    })
+
     const effect = IconEffect();
 
   return (
@@ -47,24 +76,26 @@ const Home = () => {
                 <Grid item lg={5} md={5} sm={12} xs={9} textAlign='center'>
                     
                     <div
-                       style={{display:'flex',justifyContent:'center' , alignItems:'center'}} >
+                       style={{display:'flex',justifyContent:'center' , alignItems:'left'}} >
                     <img  src={myImage} alt='myImage'  width={300} height={350} />
                     </div>
                     
                 </Grid>
                 <Grid item lg={7} md={7} sm={12} xs={12}>
                     
-                    
-                        <br/><br/>
-                        <Stack direction='column' display='flex' justifyContent='flex-start' m={5}>
-                        <Typography variant='h4'>Hello,I am</Typography>
-                        <Typography variant='h2'>Sakthikarthick N</Typography>
-                        <Typography variant='h6' >
-                        {objective}&nbsp;{showCursor && blinkCursor}
+                        <Stack direction='column' display='flex' justifyContent='center' m={5}>
+                        <Typography variant='h5'>Hello,I am</Typography>
+                        <Typography variant={isMobileScreen? 'h2' : 'h1'}  sx={{ fontFamily: 'Carattere' , display:'flex' , flexWrap :'wrap'}} >Sakthikarthick N</Typography>
+                        <Box sx={{height : 80 , width:'100%'}}>
+                            <Typography variant={isMobileScreen?'h5':'h3'} sx={{fontFamily:'monospace', display:'flex' , flexWrap :'wrap'}}>{displayWord}{showCursor && '_' }</Typography>
+                        </Box>
+                        
+                        <Typography variant='h5' >
+                        {sentence}
                         </Typography>
                         
                         <br/>
-                        {sentence === objective &&
+                        
                         <Stack direction='row' spacing={1}>
                             <IconButton component={Link} href='https://www.instagram.com/__intelligent__psycho__/' 
                                 target='blank'  ><img className={effect.root} src={Instagram} alt='Instagram'  /></IconButton>
@@ -75,13 +106,13 @@ const Home = () => {
                             <IconButton component={Link} href='https://github.com/Sakthikarthick3107' 
                                 target='blank' ><img className={effect.root} src={github} alt='Github'  /></IconButton>
                         </Stack>
-                            }
+                         
                         </Stack>
                     
                 </Grid>
             </Grid>
         </Box>
-        <div style={{height:250}}></div>
+        <div style={{height:120}}></div>
     </div>
   )
 }

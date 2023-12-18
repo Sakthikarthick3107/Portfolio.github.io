@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, IconButton,   Stack,   Tab, Tabs, Toolbar, Typography , useMediaQuery } from '@mui/material'
+import { AppBar, Avatar, Box, CssBaseline, IconButton,   Stack,   Tab, Tabs, Toolbar, Typography , useMediaQuery } from '@mui/material'
 import React, { useState } from 'react'
 import myImage from '../images/avatar2.jpg'
 
@@ -10,16 +10,17 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
     const handleChange = (event, newValue) => {
     setValue(newValue);
      };
-     const isMobileScreen = useMediaQuery('(max-width:600px)')
+     const isMobileScreen = useMediaQuery('(max-width:500px)')
 
     
 
   return (
     <>
-        <Box sx={{flexGrow:1}}  id="home">
+        <Box sx={{flexGrow:1}}  id="home" >
+            
             <AppBar >
                 <Toolbar>
-                    <Box>
+                    <Box >
                         <Avatar src={myImage} alt='MyAvatar'/>
                     </Box>&nbsp;&nbsp;
                     <Box sx={{flexGrow:1}}>

@@ -46,7 +46,7 @@ const Education = () => {
           <TimelineContent>
             <div>
               <Typography variant='h6'>S.B.K.K.S.S.Thiyagarajan Memorial Matriculation School,Aruppukottai</Typography>
-              <Typography variant='body1'>Scored 95.2%</Typography>
+              <Typography variant='body1'>95.2%</Typography>
             </div>
 
           </TimelineContent>
@@ -80,7 +80,7 @@ const Education = () => {
 
           <div>
             <Typography variant='h6'>S.B.K.Higher Secondary School,Aruppukottai</Typography>
-            <Typography variant='body1'>Scored 87.17%</Typography>
+            <Typography variant='body1'>87.17%</Typography>
           </div>
           </TimelineContent>
           </Grid>
@@ -94,7 +94,7 @@ const Education = () => {
           <div>
             <Typography variant='h6' fontWeight='bold'>B.E&nbsp;</Typography>
             <Typography variant='body1'>Computer Science Engineering&nbsp;</Typography>
-            <Typography variant='body2' >(2020 - 2024)now in the final year&nbsp;</Typography>
+            <Typography variant='body2' >(2020 - 2024)&nbsp;</Typography>
           </div>
           </TimelineOppositeContent>
           </Grid>
@@ -110,7 +110,7 @@ const Education = () => {
 
           <div>
             <Typography variant='h6'>Panimalar Engineering College</Typography>
-            <Typography variant='body1'>Scored 8.81cgpa from past 6 semesters</Typography>
+            <Typography variant='body1'>8.81 cgpa </Typography>
           </div>
 
           </TimelineContent>

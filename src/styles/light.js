@@ -2,6 +2,9 @@ import { createTheme, keyframes} from "@mui/material";
 
 const light = createTheme({
     shadows:['none'],
+    typography:{
+      fontFamily : 'Anek Odia',
+    },
     palette:{
       primary:{
         main:'rgb(255,255,255,0.5)'
@@ -10,6 +13,7 @@ const light = createTheme({
     },
   
     components:{
+      
       MuiLink:{
             styleOverrides:{
                 root:{
@@ -47,6 +51,7 @@ const light = createTheme({
             styleOverrides: {
               root: {
                 color:'black',
+                fontSize:18,
                 '&.Mui-selected': {
                   color: 'red',
 

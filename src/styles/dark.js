@@ -14,7 +14,8 @@ const dark = createTheme({
     typography:{
         allVariants:{
             color:'white'
-        }
+        },
+        fontFamily : 'Anek Odia',
     },
     // breakpoints: {
     //   values: {
@@ -52,6 +53,7 @@ const dark = createTheme({
             styleOverrides: {
               root: {
                 color:'white',
+                fontSize:18,
                 '&.Mui-selected': {
                   color: 'red',
 
