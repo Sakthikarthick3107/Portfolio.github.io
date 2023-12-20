@@ -109,12 +109,12 @@ const dark = createTheme({
         MuiCard:{
           styleOverrides: {
             root: {
-                border:'solid 1px #b3e5fc',
+                border:'solid 1px #a33bdf',
                 transition: 'transform 0.2s ease',
                 width:'90%',
                 ":hover":{
                   transform: 'scale(1.02)',
-                  boxShadow:'2px 2px 10px 5px lightblue',
+                  boxShadow:'2px 6px 10px 5px #5b0d92',
                 }
             }
           }
@@ -122,10 +122,11 @@ const dark = createTheme({
          MuiCardHeader:{
             styleOverrides: {
               root: {
-                backgroundColor: '#42a5f5'
+                backgroundColor: '#5b0d92',
               }
             }
          },
+         
          MuiCardMedia:{
           styleOverrides: {
             img: {

@@ -2,7 +2,7 @@ import { ThemeProvider } from "@emotion/react";
 import NavBar from "./components/NavBar";
 import light from "./styles/light";
 import Home from "./components/Home";
-import Education from "./components/Education";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import { CssBaseline,  Grid,  createTheme } from "@mui/material";
@@ -67,7 +67,7 @@ function App() {
         
           <NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} />
           <Home/>
-          <Education/>
+          <Experience/>
           <Skills  />
           <Projects />
      
