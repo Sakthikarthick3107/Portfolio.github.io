@@ -20,21 +20,17 @@ import vuetify from '../images/vuetify.svg'
 const SkillData ={
     "Programming":[
         {
-            name:'Java',
-            image:java
-        },
-        {
             name:'Javascript',
             image:javascript
         },
         {
-            name:'C Sharp',
-            image:csharp
-        },
-        {
             name:'Python',
             image:py
-        }
+        },
+        {
+            name:'Java',
+            image:java
+        },
         
     ],
     "Frontend":[
@@ -55,17 +51,10 @@ const SkillData ={
             image : vue
         },
         {
-            name:'Material UI',
-            image:mui
-        },
-        {
             name:'Tailwind CSS',
             image:tailwind
         },
-        {
-            name : 'Vuetify',
-            image : vuetify
-        }
+        
     ],
 
     "Backend":[
@@ -73,17 +62,13 @@ const SkillData ={
             name:'Django',
             image:django
         },
-        {
-            name:'Node Js',
-            image:nodejs
-        }
     ],
-    "Problem Solving":[
-        {
-            name:'Code Chef',
-            image:codechef
-        }
-    ],
+    // "Problem Solving":[
+    //     {
+    //         name:'Code Chef',
+    //         image:codechef
+    //     }
+    // ],
     "Tools":[
         {
             name:'Visual Studio Code',

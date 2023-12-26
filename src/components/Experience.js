@@ -14,7 +14,7 @@ import EducationIcon from "../images/education.svg";
 import { Element } from "react-scroll";
 import { useMediaQuery } from "@mui/material";
 
-const Education = () => {
+const Education = ({theme}) => {
   const isMobileScreen = useMediaQuery("(max-width:600px");
 
   return (
@@ -62,7 +62,7 @@ const Education = () => {
                   justifyContent="center"
                 >
                   <TimelineSeparator>
-                    <TimelineDot color="info" />
+                    <TimelineDot color={theme ? "secondary":'info'} />
                     <TimelineConnector />
                   </TimelineSeparator>
                 </Grid>

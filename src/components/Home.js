@@ -10,7 +10,7 @@ import github from '../images/github.png'
 import IconEffect from '../styles/IconEffect'
 
 
-const Home = () => {
+const Home = ({theme}) => {
     const domains = ['Frontend Developer' , 'Backend Developer' , 'Native App Developer' , 'Web Designer' , ''];
     const [domainIndex , setDomainIndex] = useState(0);
     const [currentWord , setCurrentWord] = useState(domains[domainIndex]);
@@ -85,9 +85,13 @@ const Home = () => {
                     
                         <Stack direction='column' display='flex' justifyContent='center' m={5}>
                         <Typography variant='h5'>Hello,I am</Typography>
-                        <Typography variant={isMobileScreen? 'h2' : 'h1'}  sx={{ fontFamily: 'Carattere' , display:'flex' , flexWrap :'wrap'}} >Sakthikarthick N</Typography>
-                        <Box sx={{height : 80 , width:'100%'}}>
-                            <Typography variant={isMobileScreen?'h5':'h3'} sx={{fontFamily:'monospace', display:'flex' , flexWrap :'wrap'}}>{displayWord}{showCursor && '_' }</Typography>
+                        <Typography variant={isMobileScreen? 'h2' : 'h1'}  sx={{ fontFamily: 'Carattere' , display:'flex' , flexWrap :'wrap'}} color={theme && 'purple'} >Sakthikarthick N</Typography>
+                        <Box sx={{marginBottom:4, height : 50 , width:'100%',display:'flex' , flexDirection:'row',alignItems:'flex-end'}}>
+                            <Typography variant={isMobileScreen?'h5':'h3'} sx={{fontFamily:'monospace', display:'flex',flexDirection:'row' , alignItems:'flex-end' , flexWrap :'wrap'}}>{displayWord}
+                            
+                            </Typography>
+                            <Typography variant={isMobileScreen?'h5':'h3'} sx={{fontFamily:'monospace' , fontWeight:800,fontSize:30}} color={theme ? '#a33bdf':'#075cb7'} >{showCursor && '_' }
+                            </Typography>
                         </Box>
                         
                         <Typography variant='h5' >

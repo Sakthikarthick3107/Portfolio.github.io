@@ -66,8 +66,8 @@ function App() {
       <CssBaseline/>
         
           <NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} />
-          <Home/>
-          <Experience/>
+          <Home  theme={darkMode} />
+          <Experience theme={darkMode} />
           <Skills  />
           <Projects />
      

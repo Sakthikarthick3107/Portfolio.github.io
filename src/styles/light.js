@@ -42,7 +42,7 @@ const light = createTheme({
                 root: {
                     
                     '& .MuiTabs-indicator': {
-                      backgroundColor: 'red', 
+                      backgroundColor: '#0d66c4', 
                     },
               },
             },
@@ -53,7 +53,7 @@ const light = createTheme({
                 color:'black',
                 fontSize:18,
                 '&.Mui-selected': {
-                  color: 'red',
+                  color: '#0d66c4',
 
                 },
               },
