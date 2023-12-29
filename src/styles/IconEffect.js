@@ -5,11 +5,12 @@ import { makeStyles } from "@mui/styles";
 const IconEffect = makeStyles((theme) =>({
     root:{
         height:70,
-        maxWidth:80,
+        //maxWidth:'cover',
+        //borderRadius:'20%',
         transition: 'transform ease-in-out 200ms',
+        background:'transparent',
         '&:hover':{
-            transform : 'scale(1.15)',
-            
+            transform : 'scale(1.05)',
         }
     }
 }));

@@ -21,6 +21,7 @@ function App() {
     
   const handleThemeChange = () =>{
     setDarkMode((prevMode) => !prevMode)
+    // localStorage.setItem('darkMode',!darkMode)
   }
 
   useEffect(() => {
@@ -54,8 +55,19 @@ function App() {
 
   const styles  = {
     container :{
-      background : darkMode? 'linear-gradient(135deg , #000000 , #212121 ,#000000 ,#37474f)' : 
-                                                'linear-gradient( 135deg, #ffffff, #e3f2fd,#ffffff,#e0f7fa)'
+      backgroundColor : darkMode?'black':'white',
+      backgroundImage : darkMode? `radial-gradient(at 0% 0%, hsla(276,36%,16%,1) 0px, transparent 50%),
+      radial-gradient(at 76% 0%, hsla(270,54%,17%,1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, hsla(262,78%,23%,1) 0px, transparent 50%),
+      radial-gradient(at 22% 0%, hsla(265,58%,21%,1) 0px, transparent 50%),
+      radial-gradient(at 45% 0%, hsla(260,80%,22%,1) 0px, transparent 50%)` : 
+      
+      `radial-gradient(at 50% 0%, hsla(181,55%,64%,1) 0px, transparent 50%),
+      radial-gradient(at 95% 0%, hsla(180,64%,60%,1) 0px, transparent 50%),
+      radial-gradient(at 75% 0%, hsla(195,98%,62%,1) 0px, transparent 50%),
+      radial-gradient(at 22% 0%, hsla(189,91%,39%,1) 0px, transparent 50%),
+      radial-gradient(at 4% 0%, hsla(199,75%,69%,1) 0px, transparent 50%)`,
+      backgroundAttachment:'fixed'
     }
   }
   return (
