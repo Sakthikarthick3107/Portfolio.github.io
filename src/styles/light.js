@@ -19,8 +19,10 @@ const light = createTheme({
                 root:{
                     textDecoration:'none',
                     color:'black',
+                    padding:0,
                     ":hover":{
-                      color:'red'
+                      color:'red',
+                      padding:0
                   }
                     
                 },
@@ -30,9 +32,13 @@ const light = createTheme({
         
         MuiIconButton:{
             styleOverrides:{
+              
                 root:{
                     color:"black",
                     padding:0
+                    // ":hover":{
+                    //   boxShadow:'1px 1px 2px 5px red'
+                    // }
                 }
             }
         },
@@ -54,7 +60,7 @@ const light = createTheme({
                 fontSize:18,
                 '&.Mui-selected': {
                   color: '#0d66c4',
-
+                  
                 },
               },
             },
@@ -81,7 +87,7 @@ const light = createTheme({
             root: {
                 border:'solid 1px #b3e5fc',
                 width:'90%',
-                backgroundColor:'#757575',
+                backgroundColor:'transparent',
                 transition: 'transform 0.2s ease',
                 
                 ":hover":{
@@ -111,8 +117,8 @@ const light = createTheme({
          MuiCardContent:{
             styleOverrides:{
               root:{
-                color:'white',
-                backgroundColor:'#757575' 
+               
+                backgroundColor:'transparent' 
               }
             }
          },

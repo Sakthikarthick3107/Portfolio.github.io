@@ -2,6 +2,7 @@ import java from '../images/java.png'
 import csharp from '../images/csharp.png'
 import py from '../images/python.png'
 import django from '../images/django.svg'
+import rest from '../images/rest.png'
 import mui from '../images/mui.png'
 import codechef from '../images/codechefavatar.jpg'
 import html from '../images/html.png'
@@ -43,7 +44,7 @@ const SkillData ={
             image:css
         },
         {
-        name:'React Js',
+        name:'React Js / React Native',
         image:react
         },
         {
@@ -54,6 +55,14 @@ const SkillData ={
             name:'Tailwind CSS',
             image:tailwind
         },
+        {
+            name:'Material UI',
+            image:mui
+        },
+        {
+            name:'Vuetify',
+            image:vuetify
+        }
         
     ],
 
@@ -62,6 +71,10 @@ const SkillData ={
             name:'Django',
             image:django
         },
+        {
+            name:'Djangorest framework',
+            image:rest
+        }
     ],
     // "Problem Solving":[
     //     {

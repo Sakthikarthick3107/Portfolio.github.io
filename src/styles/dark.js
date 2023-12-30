@@ -112,6 +112,8 @@ const dark = createTheme({
                 border:'solid 1px #a33bdf',
                 transition: 'transform 0.2s ease',
                 width:'90%',
+                backgroundColor:'transparent',
+                backdropFilter:'blur(20px)',
                 ":hover":{
                   transform: 'scale(1.02)',
                   boxShadow:'2px 6px 10px 5px #5b0d92',
@@ -143,7 +145,8 @@ const dark = createTheme({
          MuiCardContent:{
             styleOverrides: {
               root:{
-                color: 'black'
+                color: 'white',
+                
               }
             }
          },

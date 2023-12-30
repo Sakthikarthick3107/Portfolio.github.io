@@ -32,7 +32,7 @@ const Education = ({theme}) => {
             sx={{ height: 100, width: 100 }}
           />
 
-          <Typography variant="h3">Experience</Typography>
+          <Typography variant="h3" fontFamily='Lobster'>Experience</Typography>
           <br />
         </Stack>
         <Container maxWidth={isMobileScreen ? "sm" : "md"}>

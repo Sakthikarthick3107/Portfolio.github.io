@@ -24,7 +24,7 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
                         <Avatar src={myImage} alt='MyAvatar'/>
                     </Box>&nbsp;&nbsp;
                     <Box sx={{flexGrow:1}}>
-                        <Typography variant='h5' fontWeight='bold' >Portfolio</Typography>
+                        <Typography variant='h4' fontFamily='Lobster' >Portfolio</Typography>
                     </Box>
                     {isMobileScreen ?  <IconButton onClick={onThemeChange}>{icon}</IconButton> : (
                         <Box>

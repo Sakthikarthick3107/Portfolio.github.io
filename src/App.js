@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import { CssBaseline,  Grid,  createTheme } from "@mui/material";
+import { CssBaseline,  Grid,  createTheme, useMediaQuery } from "@mui/material";
 import dark from "./styles/dark";
 import { useState , useEffect} from "react";
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
@@ -23,7 +23,7 @@ function App() {
     setDarkMode((prevMode) => !prevMode)
     // localStorage.setItem('darkMode',!darkMode)
   }
-
+  
   useEffect(() => {
     const handleScrollBegin = () => {
       console.log('Scroll begin');

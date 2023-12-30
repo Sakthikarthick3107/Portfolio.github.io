@@ -3,8 +3,9 @@ import React from 'react'
 import skill from '../images/skills.svg'
 import { Element } from 'react-scroll'
 
-import SkillData from './SkillData'
+import SkillData from '../api/SkillData'
 import IconEffect from '../styles/IconEffect'
+
 
 const Skills = () => {
   const effect = IconEffect();
@@ -29,9 +30,9 @@ const Skills = () => {
   return (
     <Element name='skills'>
         <div >
-        <Stack direction='row'  alignItems='center' justifyContent='center' spacing={2}>
+        <Stack direction='row'   alignItems='flex-end' justifyContent='center' spacing={2}>
             <img src={skill} alt='SkillIcon' style={{height:80,width:90}}/>
-            <Typography variant='h3'>Skills</Typography>
+            <Typography variant='h3' fontFamily='Lobster'>Skills</Typography>
         </Stack>
         <div style={{height:50}}></div>
 
@@ -52,7 +53,7 @@ const Skills = () => {
         {Object.keys(SkillData).map(category =>(
         <Grid item lg={4} md={6} sm={6} xs={12} key = {category} >
                 <Stack direction='column' display='flex' alignItems='center' justifyContent='center'>
-                    <Typography variant='h6' fontWeight='bold'>{category}</Typography><br/>
+                    <Typography variant='h5' fontWeight='bold'>{category}</Typography><br/>
                     
                     <div>
                     
