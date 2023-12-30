@@ -1,5 +1,5 @@
 import { Avatar, Box, Container, Grid, Stack, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Timeline,
   TimelineItem,
@@ -13,9 +13,28 @@ import ExperienceData from "../api/ExperienceData";
 import EducationIcon from "../images/education.svg";
 import { Element } from "react-scroll";
 import { useMediaQuery } from "@mui/material";
+import activeDiv from "../styles/activeDiv";
 
 const Education = ({ theme }) => {
   const isMobileScreen = useMediaQuery("(max-width:600px");
+  const [isVisible, setIsVisible] = useState(false);
+  const activeEffect = activeDiv();
+
+  const handleVisibility = () => {
+    const rect = document.getElementById("targetDiv").getBoundingClientRect();
+    const scrollLocation = rect.bottom + window.scrollY; 
+    const isVisible =scrollLocation <= window.innerHeight;
+    setIsVisible(isVisible);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleVisibility);
+    handleVisibility();
+
+    return () => {
+      window.removeEventListener("scroll", handleVisibility);
+    };
+  }, []);
 
   return (
     <Element name="experience">
@@ -53,7 +72,7 @@ const Education = ({ theme }) => {
   
                   <Grid item xs={11}>
                     <TimelineContent>
-                      <div>
+                    <div id='targetDiv' className={isVisible? activeEffect.visible : activeEffect.nonVisible}>
                         <Stack direction={isMobileScreen?'column':'row'} alignItems={isMobileScreen?'flex-start':'center'} justifyContent={'space-between'}>
                         <Typography variant="h5">
                           {item.company}
@@ -84,8 +103,11 @@ const Education = ({ theme }) => {
                         <br />
                       </div>
                     </TimelineContent>
+                    
                   </Grid>
+                  
                 </Grid>
+               
               </TimelineItem>
             ))}
           </Timeline>
