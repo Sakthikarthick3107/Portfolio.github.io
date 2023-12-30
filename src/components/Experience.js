@@ -1,4 +1,4 @@
-import { Avatar, Container, Grid, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Container, Grid, Stack, Typography } from "@mui/material";
 import React from "react";
 import {
   Timeline,
@@ -9,12 +9,12 @@ import {
   TimelineSeparator,
   TimelineOppositeContent,
 } from "@mui/lab";
-
+import ExperienceData from "../api/ExperienceData";
 import EducationIcon from "../images/education.svg";
 import { Element } from "react-scroll";
 import { useMediaQuery } from "@mui/material";
 
-const Education = ({theme}) => {
+const Education = ({ theme }) => {
   const isMobileScreen = useMediaQuery("(max-width:600px");
 
   return (
@@ -32,151 +32,62 @@ const Education = ({theme}) => {
             sx={{ height: 100, width: 100 }}
           />
 
-          <Typography variant="h3" fontFamily='Lobster'>Experience</Typography>
+          <Typography variant="h3" fontFamily="Lobster">
+            Experience
+          </Typography>
           <br />
         </Stack>
-        <Container maxWidth={isMobileScreen ? "sm" : "md"}>
+        <Container maxWidth={isMobileScreen ? "sm" : "lg"}>
           <Timeline>
-
-          <TimelineItem>
-              <Grid container>
-                <Grid item xs={3} sm={4} md={5}>
-                  <TimelineOppositeContent>
-                    <div>
-                      <Typography variant="h6">
-                        Current position
-                      </Typography>
-                      <Typography variant="body2">
-                        {/* (2020 - 2024)&nbsp; */}
-                      </Typography>
-                    </div>
-                  </TimelineOppositeContent>
+            {ExperienceData.map((item,index)=>(
+                <TimelineItem key={index}>
+                <Grid container>
+                  <Grid item xs={1} display="flex" justifyContent="center">
+                    <TimelineSeparator>
+                      <TimelineDot  color={index === 0 ?theme ? "secondary" : "info" :"success"} />
+                      {index !== ExperienceData.length-1 &&
+                      <TimelineConnector />
+                    }
+                    </TimelineSeparator>
+                  </Grid>
+  
+                  <Grid item xs={11}>
+                    <TimelineContent>
+                      <div>
+                        <Stack direction={isMobileScreen?'column':'row'} alignItems={isMobileScreen?'flex-start':'center'} justifyContent={'space-between'}>
+                        <Typography variant="h5">
+                          {item.company}
+                        </Typography>
+                        <Typography variant={isMobileScreen?"body2":'body1'}>
+                          {item.duration}
+                        </Typography>
+                        </Stack>
+                        
+                        <Typography variant="h6">
+                          {item.role}
+                        </Typography>
+                        <br />
+                        {item.responsibility.length !== 0 &&
+                        <Typography variant="body1">
+                          <Typography style={{ textDecoration: "underline" }}>
+                            Responsibility:
+                          </Typography>
+                          <ul type="disc">
+                            { item.responsibility.map((role,ind)=>(
+                              <li key={ind}>
+                                {role}
+                            </li>
+                            ))}
+                            
+                          </ul>
+                        </Typography>}
+                        <br />
+                      </div>
+                    </TimelineContent>
+                  </Grid>
                 </Grid>
-
-                <Grid
-                  item
-                  xs={1}
-                  sm={1}
-                  md={2}
-                  display="flex"
-                  justifyContent="center"
-                >
-                  <TimelineSeparator>
-                    <TimelineDot color={theme ? "secondary":'info'} />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                </Grid>
-
-                <Grid item xs={6} sm={6} md={5}>
-                  <TimelineContent>
-                    <div>
-                      <Typography variant="h6">
-                        Will update soon
-                      </Typography>
-                      <Typography variant="body1"></Typography>
-                    </div>
-                  </TimelineContent>
-                </Grid>
-              </Grid>
-            </TimelineItem>
-
-          <TimelineItem>
-              <Grid container>
-                <Grid item xs={3} sm={4} md={5}>
-                  <TimelineOppositeContent>
-                    <div>
-                      <Typography variant="h6" fontWeight="bold">
-                        Web and Mobile Developer Intern
-                      </Typography>
-                      <Typography variant="body2">
-                        October 2023 - November 2023
-                      </Typography>
-                    </div>
-                  </TimelineOppositeContent>
-                </Grid>
-
-                <Grid
-                  item
-                  xs={1}
-                  sm={1}
-                  md={2}
-                  display="flex"
-                  justifyContent="center"
-                >
-                  <TimelineSeparator>
-                    <TimelineDot color="success" />
-                    <TimelineConnector />
-                  </TimelineSeparator>
-                </Grid>
-
-                <Grid item xs={6} sm={6} md={5}>
-                  <TimelineContent>
-                    <div>
-                      <Typography variant="h6">
-                        Dipeat Foods Private Limited
-                      </Typography>
-                      <Typography variant="body1">
-                        <ul type="disc">
-                          <li>
-                            Design and manage the company website's UI with
-                            Vue.js for an intuitive, visually appealing, and
-                            creative user experience across all devices.
-                          </li>
-                          <li>
-                            Develop a React Native app for the company, enhancing
-                            its portfolio and gaining valuable experience
-                            in mobile app development.
-                          </li>
-                        </ul>
-                      </Typography>
-                    </div>
-                  </TimelineContent>
-                </Grid>
-              </Grid>
-            </TimelineItem>
-
-            <TimelineItem>
-              <Grid container>
-                <Grid item xs={3} sm={4} md={5}>
-                  <TimelineOppositeContent>
-                    <div>
-                      <Typography variant="h6" fontWeight="bold">
-                        Web Developer Intern
-                      </Typography>
-                      <Typography variant="body2">August 2023</Typography>
-                    </div>
-                  </TimelineOppositeContent>
-                </Grid>
-
-                <Grid
-                  item
-                  xs={1}
-                  sm={1}
-                  md={2}
-                  display="flex"
-                  justifyContent="center"
-                >
-                  <TimelineSeparator>
-                    <TimelineDot color="success" />
-                    
-                  </TimelineSeparator>
-                </Grid>
-
-                <Grid item xs={6} sm={6} md={5}>
-                  <TimelineContent>
-                    <div>
-                      <Typography variant="h6">Let's Grow More</Typography>
-                      <Typography variant="body1">
-                        Successfully tackled the tasks , optimizing website
-                        performance and honing my skills in web development
-                        using React Js .
-                      </Typography>
-                    </div>
-                  </TimelineContent>
-                </Grid>
-              </Grid>
-            </TimelineItem>
-
+              </TimelineItem>
+            ))}
           </Timeline>
         </Container>
         <div style={{ height: 150 }}></div>
