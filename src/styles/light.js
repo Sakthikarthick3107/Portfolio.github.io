@@ -1,4 +1,4 @@
-import { createTheme, keyframes } from "@mui/material";
+import { createTheme } from "@mui/material";
 
 const light = createTheme({
   shadows: ["none"],
@@ -30,7 +30,7 @@ const light = createTheme({
       styleOverrides: {
         root: {
           color: "black",
-          padding: 0,
+          padding: 0  ,
           // ":hover":{
           //   boxShadow:'1px 1px 2px 5px red'
           // }

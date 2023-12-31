@@ -1,6 +1,6 @@
 import {
   Avatar,
-  Box,
+  // Box,
   Container,
   Grid,
   Link,
@@ -15,14 +15,13 @@ import {
   TimelineContent,
   TimelineDot,
   TimelineSeparator,
-  TimelineOppositeContent,
+  // TimelineOppositeContent,
 } from "@mui/lab";
 import ExperienceData from "../api/ExperienceData";
 import EducationIcon from "../images/education.svg";
 import { Element } from "react-scroll";
 import { useMediaQuery } from "@mui/material";
 import activeDiv from "../styles/activeDiv";
-import { Image } from "@mui/icons-material";
 
 const Education = ({ theme }) => {
   const isMobileScreen = useMediaQuery("(max-width:600px");
@@ -110,7 +109,7 @@ const Education = ({ theme }) => {
                         <Stack
                           direction={"row"}
                           spacing={4}
-                          alignItems={"center"}
+                          alignItems={"start"}
                         >
                           {!isMobileScreen && (
                             <div>
@@ -134,7 +133,7 @@ const Education = ({ theme }) => {
                                 component={Link}
                                 href={item.link}
                                 target="_blank"
-                                variant="h5"
+                                variant="h5" fontWeight='bold' fontStyle={'oblique'}
                               >
                                 {item.company}
                               </Typography>
@@ -146,10 +145,13 @@ const Education = ({ theme }) => {
                             </Stack>
 
                             <Typography variant="h6">{item.role}</Typography>
+                            <Typography component={Link} variant="caption" style={{ textDecoration: "underline" }}>{showDetails !==index &&item.responsibility.length !== 0  &&'Show full details'} </Typography>
                           </div>
                         </Stack>
                         <br />
-                        {item.responsibility.length !== 0 && showDetails===index && (
+                        {item.responsibility.length !== 0 
+                        && showDetails===index 
+                        && (
                           <Typography variant="body1">
                             <Typography style={{ textDecoration: "underline" }}>
                               Responsibility:
@@ -159,6 +161,7 @@ const Education = ({ theme }) => {
                                 <li key={ind}>{role}</li>
                               ))}
                             </ul>
+                            <Typography component={Link}  variant="caption" style={{ textDecoration: "underline" }}>{showDetails ===index &&'Hide details'} </Typography>
                           </Typography>
                         )}
                         <br />

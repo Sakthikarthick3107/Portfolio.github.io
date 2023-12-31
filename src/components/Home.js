@@ -9,11 +9,10 @@ import {
 } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import myImage from "../images/mypic.png";
-import Item from "../styles/Item";
+// import Item from "../styles/Item";
 import Instagram from "../images/instagram.png";
 import LinkedIn from "../images/linkedin.png";
 import Mail from "../images/mail.png";
-import codechef from "../images/codechefavatar.jpg";
 import github from "../images/github.png";
 import IconEffect from "../styles/IconEffect";
 import activeDiv from "../styles/activeDiv";
@@ -24,7 +23,7 @@ const Home = ({ theme }) => {
     "Backend Developer",
     "Native App Developer",
     "Web Designer",
-    "",
+  
   ];
   const [domainIndex, setDomainIndex] = useState(0);
   const [currentWord, setCurrentWord] = useState(domains[domainIndex]);
@@ -46,7 +45,8 @@ const Home = ({ theme }) => {
         if (currentWord !== displayWord) {
           setDisplayWord((prev) => prev + currentWord[currentWordIndex]);
           setCurrentWordIndex((prev) => prev + 1);
-        } else {
+        }
+        else {
           clearInterval(typing);
           setTimeout(() => {
             setIsTyping(false);
@@ -62,14 +62,14 @@ const Home = ({ theme }) => {
         } else {
           clearInterval(erasing);
           setIsTyping(true);
-          setCurrentWordIndex((prev) => 0);
-          if (domainIndex === domains.length - 1) {
-            setDomainIndex(0);
-            setCurrentWord(domains[0]);
-          } else {
+          setCurrentWordIndex(0);
             setDomainIndex((prev) => prev + 1);
             setCurrentWord(domains[domainIndex]);
-          }
+            if (domainIndex === domains.length) {
+              setDomainIndex(0);
+              setCurrentWord(domains[0]);
+            }
+          
         }
       }, 35);
       return () => clearInterval(erasing);
@@ -113,7 +113,7 @@ const Home = ({ theme }) => {
                 alignItems: "left",
               }}
             >
-              <img src={myImage} alt="myImage" width={300} height={350} />
+              <img src={myImage} alt="myImage" width={isMobileScreen?250:300} height={isMobileScreen?300:350} />
             </div>
           </Grid>
           <Grid item lg={7} md={7} sm={12} xs={12}>
@@ -200,7 +200,7 @@ const Home = ({ theme }) => {
                 }
               >
                 <Stack direction="row" spacing={1}>
-                  <IconButton
+                  <IconButton 
                     component={Link}
                     href="https://www.instagram.com/__intelligent__psycho__/"
                     target="blank"

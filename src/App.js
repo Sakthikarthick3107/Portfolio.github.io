@@ -67,7 +67,8 @@ function App() {
       radial-gradient(at 75% 0%, hsla(195,98%,62%,1) 0px, transparent 50%),
       radial-gradient(at 22% 0%, hsla(189,91%,39%,1) 0px, transparent 50%),
       radial-gradient(at 4% 0%, hsla(199,75%,69%,1) 0px, transparent 50%)`,
-      backgroundAttachment:'fixed'
+      backgroundAttachment:'fixed',
+      overflowX:'hidden'
     }
   }
   return (
