@@ -42,7 +42,7 @@ const Home = ({ theme }) => {
   useEffect(() => {
     if (isTyping) {
       const typing = setInterval(() => {
-        if (currentWord !== displayWord) {
+        if (currentWord && currentWordIndex < currentWord.length) {
           setDisplayWord((prev) => prev + currentWord[currentWordIndex]);
           setCurrentWordIndex((prev) => prev + 1);
         }
