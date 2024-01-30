@@ -161,7 +161,7 @@ const Education = ({ theme }) => {
                                 <li key={ind}>{role}</li>
                               ))}
                             </ul>
-                            <Typography component={Link}  variant="caption" style={{ textDecoration: "underline" }}>{showDetails ===index &&'Hide details'} </Typography>
+                
                           </Typography>
                         )}
                         <br />

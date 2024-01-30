@@ -199,7 +199,7 @@ const Home = ({ theme }) => {
                   isVisible ? activeEffect.visible : activeEffect.nonVisible
                 }
               >
-                <Stack direction="row" spacing={1}>
+                <Stack direction="row">
                   <IconButton 
                     component={Link}
                     href="https://www.instagram.com/__intelligent__psycho__/"
