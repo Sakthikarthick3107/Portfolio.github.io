@@ -20,7 +20,6 @@ const light = createTheme({
           padding: 0,
           ":hover": {
             color: "red",
-            padding: 0,
           },
         },
       },
@@ -78,7 +77,7 @@ const light = createTheme({
       styleOverrides: {
         root: {
           border: "solid 1px #b3e5fc",
-          width: "90%",
+          width: "95%",
           backgroundColor: "transparent",
           transition: "transform 0.2s ease",
 

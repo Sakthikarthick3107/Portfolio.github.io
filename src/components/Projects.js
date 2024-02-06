@@ -29,7 +29,7 @@ const Projects = () => {
       <div>
         <Stack
           direction="row"
-          alignItems='center'
+          alignItems='stretch'
           justifyContent="center"
           spacing={2}
         >
@@ -153,7 +153,7 @@ const Projects = () => {
                             href={values.live}
                             target="_blank"
                           >
-                            Live
+                         {values.live.endsWith('apk')?'Download':'Live'}
                           </Button>
                         </CardActions>
                       </Card>

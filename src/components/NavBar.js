@@ -31,7 +31,7 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
                         <Stack direction='row'>
                         <Tabs value={value} onChange={handleChange}>
                             
-                            <Tab onClick={() => scrolltoSection('home')}   label="home" /> 
+                            <Tab onClick={() => scrolltoSection('home')}    label="home" /> 
                             <Tab onClick={() => scrolltoSection('experience')}   label="experience" />
                             <Tab  onClick={() => scrolltoSection('skills')}  label="skills"/>
                             <Tab  onClick={() => scrolltoSection('projects')}  label='works'/>

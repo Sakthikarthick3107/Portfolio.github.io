@@ -111,7 +111,7 @@ const dark = createTheme({
             root: {
                 border:'solid 1px #a33bdf',
                 transition: 'transform 0.2s ease',
-                width:'90%',
+                width:'95%',
                 backgroundColor:'transparent',
                 backdropFilter:'blur(20px)',
                 ":hover":{

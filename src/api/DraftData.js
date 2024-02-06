@@ -11,9 +11,9 @@ const DraftData = [
     title : 'To-do-list',
     subheader : 'Simple tool for note down our daily tasks and summarize',
     image : notes,
-    content : 'A simple to-do-list with neat user interfaces and features',
-    code: 'https://github.com/Sakthikarthick3107/LGMVIP-Web-1-to-do-list',
-    live : 'https://sakthikarthicks-to-do-list.netlify.app/'
+    content : 'A simple to-do-list with neat user interfaces and features developed using React Native and Nativewind',
+    code: 'https://github.com/Sakthikarthick3107/todo-mobile',
+    live : 'https://expo.dev/artifacts/eas/rB9Tv7BKUqsXiEr6pMKRRu.apk'
   },
     {
       title : 'Dashboard Design',
