@@ -11,6 +11,7 @@ import javascript  from '../images/javascript.png'
 import react from '../images/react.png'
 import vscode from '../images/vscode.png'
 import git from '../images/git.png'
+import figma from '../images/figma.png'
 import tailwind from '../images/tailwind.png'
 import nodejs from '../images/nodejs.png'
 import mysql from '../images/mysql.png'
@@ -94,6 +95,10 @@ const SkillData ={
         {
             name : 'Postman',
             image : postman
+        },
+    {
+            name : 'Figma',
+            image : figma
         }
     ],
     "Databases":[
