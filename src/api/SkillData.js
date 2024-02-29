@@ -96,7 +96,7 @@ const SkillData ={
             name : 'Postman',
             image : postman
         },
-    {
+        {
             name : 'Figma',
             image : figma
         }

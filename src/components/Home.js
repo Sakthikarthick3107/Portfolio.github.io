@@ -97,8 +97,8 @@ const Home = ({ theme }) => {
   }, []);
 
   return (
-    <div>
-      <Box>
+  
+      <Box sx={{minHeight:'100vh'}}>
         <Grid
           container
           display="flex"
@@ -242,8 +242,8 @@ const Home = ({ theme }) => {
           </Grid>
         </Grid>
       </Box>
-      <div style={{ height: 120 }}></div>
-    </div>
+      
+
   );
 };
 

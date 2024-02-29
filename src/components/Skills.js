@@ -29,7 +29,7 @@ const Skills = () => {
  
   return (
     <Element name='skills'>
-        <div >
+        <div style={{minHeight:'100vh'}}>
         <Stack direction='row'   alignItems='flex-end' justifyContent='center' spacing={2}>
             <img src={skill} alt='SkillIcon' style={{height:80,width:90}}/>
             <Typography variant='h3' fontFamily='Lobster'>Skills</Typography>
@@ -72,7 +72,6 @@ const Skills = () => {
             </>}
         </Grid>
         </div>
-        <div style={{height:150}}></div>
     </Element>
   )
 }

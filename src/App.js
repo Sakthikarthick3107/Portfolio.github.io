@@ -11,6 +11,7 @@ import { useState , useEffect} from "react";
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Events, scroller } from 'react-scroll';
+import './app.css';
 
 
 
@@ -68,8 +69,9 @@ function App() {
       radial-gradient(at 22% 0%, hsla(189,91%,39%,1) 0px, transparent 50%),
       radial-gradient(at 4% 0%, hsla(199,75%,69%,1) 0px, transparent 50%)`,
       backgroundAttachment:'fixed',
-      overflowX:'hidden'
-    }
+      overflowX:'hidden',
+    },
+   
   }
   return (
     

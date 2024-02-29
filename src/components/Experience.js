@@ -56,7 +56,7 @@ const Education = ({ theme }) => {
 
   return (
     <Element name="experience">
-      <div>
+      <div style={{minHeight:'100vh'}}>
         <Stack
           direction="row"
           alignItems="center"
@@ -173,7 +173,7 @@ const Education = ({ theme }) => {
             ))}
           </Timeline>
         </Container>
-        <div style={{ height: 150 }}></div>
+        
       </div>
     </Element>
   );
