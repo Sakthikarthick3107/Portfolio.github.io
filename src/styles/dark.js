@@ -135,6 +135,7 @@ const dark = createTheme({
               height: 150,
               width: 150,
               display:'block',
+              objectFit:'contain',
               marginLeft:  'auto',
               marginRight:'auto',
               

@@ -19,6 +19,7 @@ import postman from '../images/postman.png'
 import vue from '../images/vue.png'
 import vuetify from '../images/vuetify.svg'
 
+
 const SkillData ={
     "Programming":[
         {

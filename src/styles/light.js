@@ -100,6 +100,7 @@ const light = createTheme({
         img: {
           height: 150,
           width: 150,
+          objectFit:'contain',
           display: "block",
         },
       },
