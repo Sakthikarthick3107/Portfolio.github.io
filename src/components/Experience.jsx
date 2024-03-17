@@ -55,7 +55,7 @@ const Education = ({ theme }) => {
   }
 
   return (
-    <Element name="experience">
+    <Element name="experience" >
       <div style={{minHeight:'100vh'}}>
         <Stack
           direction="row"

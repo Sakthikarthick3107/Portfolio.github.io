@@ -5,25 +5,42 @@ import Home from "./components/Home";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import { CssBaseline,  Grid,  createTheme, useMediaQuery } from "@mui/material";
+import { CssBaseline, Fab } from "@mui/material";
 import dark from "./styles/dark";
 import { useState , useEffect} from "react";
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import { Events, scroller } from 'react-scroll';
 import './app.css';
+import FloatingBtn from "./components/FloatingBtn";
+import sun from './images/sun.svg';
+import moon from './images/crescent-moon.svg'
 
 
 
 function App() {
   const [darkMode , setDarkMode] = useState(false)
   const theme =darkMode? dark : light
-  const icon =  darkMode?<WbSunnyIcon/>:<DarkModeIcon/>
+  const icon =  darkMode?sun:moon
     
   const handleThemeChange = () =>{
     setDarkMode((prevMode) => !prevMode)
     // localStorage.setItem('darkMode',!darkMode)
   }
+
+  useEffect(() => {
+    const shortcutTheme = (e) =>{
+      if( e.shiftKey && (e.key.toLowerCase() ==='t' || e.key ==='t')){
+        handleThemeChange();
+      }
+    }
+    window.addEventListener('keydown' , shortcutTheme)
+  
+    return () => {
+     window.removeEventListener('keydown' , shortcutTheme)
+    }
+  }, [])
+  
   
   useEffect(() => {
     const handleScrollBegin = () => {
@@ -80,12 +97,12 @@ function App() {
       <ThemeProvider theme={theme}>
       <CssBaseline/>
         
-          <NavBar  onThemeChange={handleThemeChange} icon={icon} scrolltoSection={scrollToSection} />
+          <NavBar   scrolltoSection={scrollToSection} />
           <Home  theme={darkMode} />
           <Experience theme={darkMode} />
           <Skills  />
           <Projects />
-     
+          <FloatingBtn onThemeChange={handleThemeChange} icon={icon} />
         </ThemeProvider>
       </div>
     

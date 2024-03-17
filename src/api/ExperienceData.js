@@ -3,7 +3,15 @@ import dipeat from '../images/dipeat.png';
 import tmachine from '../images/tmachine.jpeg';
 
 const ExperienceData = [
-    
+    {
+        company : 'T-Machine Software Solutions',
+        link:'https://tmachinesoftware.com/',
+        role : 'Associate Software Engineer Intern',
+        responsibility: [
+        ],
+        duration : 'January 2024 - Current',
+        logo : tmachine
+    },
     {
         company : 'Dipeat Foods Private Limited',
         link : 'https://dipeat.com/',

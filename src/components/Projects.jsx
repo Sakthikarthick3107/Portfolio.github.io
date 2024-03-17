@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <Element name="projects">
-      <div>
+      <div> 
         <Stack
           direction="row"
           alignItems='stretch'

@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, CssBaseline, IconButton,   Stack,   Tab, Tabs, Toolbar, Typography , useMediaQuery } from '@mui/material'
+import { AppBar, Avatar, Box, IconButton,   Stack,   Tab, Tabs, Toolbar, Typography , useMediaQuery } from '@mui/material'
 import React, { useState } from 'react'
 import myImage from '../images/avatar2.jpg'
 
@@ -37,7 +37,7 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
                             <Tab  onClick={() => scrolltoSection('projects')}  label='works'/>
                             
                         </Tabs>
-                        <IconButton onClick={onThemeChange}>{icon}</IconButton>
+                       
                         </Stack>
                         
                         </Box>
@@ -45,7 +45,7 @@ const NavBar = ({onThemeChange , icon, scrolltoSection}) => {
                 </Toolbar>
             </AppBar>
         </Box>
-        <div style={{height:120}}></div>
+        {/* <div style={{height:120}}></div> */}
     </>
   )
 }

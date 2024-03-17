@@ -98,7 +98,10 @@ const Home = ({ theme }) => {
 
   return (
   
-      <Box sx={{minHeight:'100vh'}}>
+      <Box sx={{minHeight:'100vh' ,display:'flex',justifyContent:'center',
+            alignItems:'center',
+            backgroundAttachment:'fixed'
+            }}>
         <Grid
           container
           display="flex"
